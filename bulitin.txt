@@ -1,0 +1,72 @@
+bulit常用内置关键字介绍
+
+
+1.字符窜相关
+get count
+get length
+
+catenate：链接字符串  comment：注释
+
+evaluate
+2.控制流：
+
+continue for loop
+continue for loop if
+exit for loop 
+exit for loop if
+2.关键字相关
+run keyword 
+run keyword if
+run keyword and ignore error
+repeat keyword：可以是次数：数字或 n times，或者是超时时间，如5s ，3minutes
+return from keyword:定义返回值
+run keyword unless;
+run keywords:执行多个关键字，直接后面写，如果有参数，则使用AND连接
+……………………
+还有很多，不做介绍，知道上面的就够了
+
+
+
+4.变量相关
+create list：
+create dictonary
+set varable:
+set suit variable
+set global varibale
+get valrable value
+get varibales
+set variable if
+
+
+
+5.类型转换
+*convert to string
+convert to number
+convert to octal
+convert to binnary
+convert to hex
+convert to intrger
+convaert to boolen
+
+6.导入
+import lobrary
+import resouse
+import varibale
+
+7.日志打印
+log
+log many：可以打印多列，也可以打印列表@{list1}
+loig varibales:打印所有可用变量
+log console：打印到控制台
+
+8.正则相关
+Regexp Escape：转义，
+Should Match Regexp
+
+9.断言
+should equeal
+should equeal as string
+should contains
+shoould be empty
+should be true
+…………………………
