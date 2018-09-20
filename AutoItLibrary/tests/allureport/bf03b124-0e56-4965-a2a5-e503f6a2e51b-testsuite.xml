@@ -1,0 +1,2006 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1534052423649" stop="1534052452273">
+  <description>Tests the AutoItLibrary by using various AutoIt keywords on the GUI of the Windows Calculator application.
+
+
+1.变量的设定在该关键字，通过版本的不同获取到不同的buttonname
+Get Calculator Version
+
+2.suit set up.teart dow等的作用
+
+3.导入库的参数的解释
+
+刘伟
+
+20180811</description>
+  <name>Calculator Test Cases</name>
+  <title>Calculator Test Cases</title>
+  <labels/>
+  <test-cases>
+    <test-case severity="None" start="1534052428415" status="passed" stop="1534052429962">
+      <description>Get "The Answer" by addition.</description>
+      <name>Integer Addition</name>
+      <attachments/>
+      <labels>
+        <label name="thread" value="3208"/>
+      </labels>
+      <steps>
+        <step start="1534052428416" status="passed" stop="1534052428417">
+          <name>AutoItLibrary.Win Activate</name>
+          <title>AutoItLibrary.Win Activate</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052428417" status="passed" stop="1534052428433">
+          <name>Click Button</name>
+          <title>Click Button</title>
+          <attachments/>
+          <steps>
+            <step start="1534052428418" status="passed" stop="1534052428421">
+              <name>BuiltIn.Log Many</name>
+              <title>BuiltIn.Log Many</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052428421" status="passed" stop="1534052428421">
+              <name>BuiltIn.Log Many</name>
+              <title>BuiltIn.Log Many</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052428422" status="passed" stop="1534052428422">
+              <name>Collections.Get From Dictionary</name>
+              <title>Collections.Get From Dictionary</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052428422" status="passed" stop="1534052428433">
+              <name>AutoItLibrary.Control Click</name>
+              <title>AutoItLibrary.Control Click</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052428434" status="passed" stop="1534052428532">
+          <name>Click Buttons</name>
+          <title>Click Buttons</title>
+          <attachments/>
+          <steps>
+            <step start="1534052428435" status="passed" stop="1534052428435">
+              <name>String.Split String</name>
+              <title>String.Split String</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052428435" status="passed" stop="1534052428436">
+              <name>BuiltIn.Log Many</name>
+              <title>BuiltIn.Log Many</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052428437" status="passed" stop="1534052428454">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052428438" status="passed" stop="1534052428440">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052428441" status="passed" stop="1534052428441">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052428442" status="passed" stop="1534052428442">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052428442" status="passed" stop="1534052428453">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052428454" status="passed" stop="1534052428470">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052428455" status="passed" stop="1534052428458">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052428458" status="passed" stop="1534052428458">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052428459" status="passed" stop="1534052428459">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052428459" status="passed" stop="1534052428470">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052428471" status="passed" stop="1534052428488">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052428472" status="passed" stop="1534052428474">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052428475" status="passed" stop="1534052428475">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052428475" status="passed" stop="1534052428476">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052428476" status="passed" stop="1534052428487">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052428498" status="passed" stop="1534052428514">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052428498" status="passed" stop="1534052428501">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052428501" status="passed" stop="1534052428502">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052428502" status="passed" stop="1534052428503">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052428503" status="passed" stop="1534052428514">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052428515" status="passed" stop="1534052428532">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052428515" status="passed" stop="1534052428518">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052428519" status="passed" stop="1534052428519">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052428519" status="passed" stop="1534052428520">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052428520" status="passed" stop="1534052428531">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052428533" status="passed" stop="1534052428794">
+          <name>AutoItLibrary.Win Wait</name>
+          <title>AutoItLibrary.Win Wait</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052428794" status="passed" stop="1534052429958">
+          <name>Get Answer</name>
+          <title>Get Answer</title>
+          <attachments/>
+          <steps>
+            <step start="1534052428795" status="passed" stop="1534052429957">
+              <name>Select Calculator Menu Item</name>
+              <title>Select Calculator Menu Item</title>
+              <attachments/>
+              <steps>
+                <step start="1534052428796" status="passed" stop="1534052428796">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052428796" status="passed" stop="1534052428797">
+                  <name>BuiltIn.Comment</name>
+                  <title>BuiltIn.Comment</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052428797" status="passed" stop="1534052428823">
+                  <name>AutoItLibrary.Send</name>
+                  <title>AutoItLibrary.Send</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052428823" status="passed" stop="1534052429823">
+                  <name>BuiltIn.Sleep</name>
+                  <title>BuiltIn.Sleep</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052429823" status="passed" stop="1534052429930">
+                  <name>AutoItLibrary.Send</name>
+                  <title>AutoItLibrary.Send</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052429930" status="passed" stop="1534052429956">
+                  <name>AutoItLibrary.Send</name>
+                  <title>AutoItLibrary.Send</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052429957" status="passed" stop="1534052429958">
+              <name>AutoItLibrary.Clip Get</name>
+              <title>AutoItLibrary.Clip Get</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052429958" status="passed" stop="1534052429959">
+          <name>BuiltIn.Should Be Equal As Numbers</name>
+          <title>BuiltIn.Should Be Equal As Numbers</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052429959" status="passed" stop="1534052429959">
+          <name>BuiltIn.Comment</name>
+          <title>BuiltIn.Comment</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052429960" status="passed" stop="1534052429960">
+          <name>BuiltIn.Comment</name>
+          <title>BuiltIn.Comment</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case severity="None" start="1534052429963" status="passed" stop="1534052431463">
+      <description>Get "The Answer" by subtraction.</description>
+      <name>Integer Subtraction</name>
+      <attachments/>
+      <labels>
+        <label name="thread" value="3208"/>
+      </labels>
+      <steps>
+        <step start="1534052429963" status="passed" stop="1534052429965">
+          <name>AutoItLibrary.Win Activate</name>
+          <title>AutoItLibrary.Win Activate</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052429965" status="passed" stop="1534052429983">
+          <name>Click Button</name>
+          <title>Click Button</title>
+          <attachments/>
+          <steps>
+            <step start="1534052429966" status="passed" stop="1534052429969">
+              <name>BuiltIn.Log Many</name>
+              <title>BuiltIn.Log Many</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052429969" status="passed" stop="1534052429970">
+              <name>BuiltIn.Log Many</name>
+              <title>BuiltIn.Log Many</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052429970" status="passed" stop="1534052429971">
+              <name>Collections.Get From Dictionary</name>
+              <title>Collections.Get From Dictionary</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052429971" status="passed" stop="1534052429982">
+              <name>AutoItLibrary.Control Click</name>
+              <title>AutoItLibrary.Control Click</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052429984" status="passed" stop="1534052430079">
+          <name>Click Buttons</name>
+          <title>Click Buttons</title>
+          <attachments/>
+          <steps>
+            <step start="1534052429985" status="passed" stop="1534052429986">
+              <name>String.Split String</name>
+              <title>String.Split String</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052429986" status="passed" stop="1534052429988">
+              <name>BuiltIn.Log Many</name>
+              <title>BuiltIn.Log Many</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052429989" status="passed" stop="1534052430009">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052429990" status="passed" stop="1534052429995">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052429995" status="passed" stop="1534052429996">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052429996" status="passed" stop="1534052429997">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052429997" status="passed" stop="1534052430009">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052430010" status="passed" stop="1534052430027">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052430011" status="passed" stop="1534052430014">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052430014" status="passed" stop="1534052430015">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052430015" status="passed" stop="1534052430015">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052430016" status="passed" stop="1534052430027">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052430028" status="passed" stop="1534052430044">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052430028" status="passed" stop="1534052430031">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052430031" status="passed" stop="1534052430032">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052430032" status="passed" stop="1534052430033">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052430033" status="passed" stop="1534052430044">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052430045" status="passed" stop="1534052430061">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052430046" status="passed" stop="1534052430048">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052430048" status="passed" stop="1534052430049">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052430049" status="passed" stop="1534052430050">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052430050" status="passed" stop="1534052430061">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052430062" status="passed" stop="1534052430079">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052430063" status="passed" stop="1534052430065">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052430066" status="passed" stop="1534052430066">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052430067" status="passed" stop="1534052430067">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052430067" status="passed" stop="1534052430078">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052430079" status="passed" stop="1534052430340">
+          <name>AutoItLibrary.Win Wait</name>
+          <title>AutoItLibrary.Win Wait</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052430341" status="passed" stop="1534052431460">
+          <name>Get Answer</name>
+          <title>Get Answer</title>
+          <attachments/>
+          <steps>
+            <step start="1534052430341" status="passed" stop="1534052431459">
+              <name>Select Calculator Menu Item</name>
+              <title>Select Calculator Menu Item</title>
+              <attachments/>
+              <steps>
+                <step start="1534052430342" status="passed" stop="1534052430342">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052430343" status="passed" stop="1534052430343">
+                  <name>BuiltIn.Comment</name>
+                  <title>BuiltIn.Comment</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052430343" status="passed" stop="1534052430369">
+                  <name>AutoItLibrary.Send</name>
+                  <title>AutoItLibrary.Send</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052430369" status="passed" stop="1534052431370">
+                  <name>BuiltIn.Sleep</name>
+                  <title>BuiltIn.Sleep</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052431370" status="passed" stop="1534052431432">
+                  <name>AutoItLibrary.Send</name>
+                  <title>AutoItLibrary.Send</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052431432" status="passed" stop="1534052431458">
+                  <name>AutoItLibrary.Send</name>
+                  <title>AutoItLibrary.Send</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052431459" status="passed" stop="1534052431459">
+              <name>AutoItLibrary.Clip Get</name>
+              <title>AutoItLibrary.Clip Get</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052431460" status="passed" stop="1534052431461">
+          <name>BuiltIn.Should Be Equal As Numbers</name>
+          <title>BuiltIn.Should Be Equal As Numbers</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case severity="None" start="1534052431463" status="passed" stop="1534052432939">
+      <description>Get "The Answer" by multiplication.</description>
+      <name>Integer Multiplication</name>
+      <attachments/>
+      <labels>
+        <label name="thread" value="3208"/>
+      </labels>
+      <steps>
+        <step start="1534052431464" status="passed" stop="1534052431465">
+          <name>AutoItLibrary.Win Activate</name>
+          <title>AutoItLibrary.Win Activate</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052431465" status="passed" stop="1534052431482">
+          <name>Click Button</name>
+          <title>Click Button</title>
+          <attachments/>
+          <steps>
+            <step start="1534052431466" status="passed" stop="1534052431469">
+              <name>BuiltIn.Log Many</name>
+              <title>BuiltIn.Log Many</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052431469" status="passed" stop="1534052431469">
+              <name>BuiltIn.Log Many</name>
+              <title>BuiltIn.Log Many</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052431470" status="passed" stop="1534052431470">
+              <name>Collections.Get From Dictionary</name>
+              <title>Collections.Get From Dictionary</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052431471" status="passed" stop="1534052431481">
+              <name>AutoItLibrary.Control Click</name>
+              <title>AutoItLibrary.Control Click</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052431482" status="passed" stop="1534052431555">
+          <name>Click Buttons</name>
+          <title>Click Buttons</title>
+          <attachments/>
+          <steps>
+            <step start="1534052431483" status="passed" stop="1534052431483">
+              <name>String.Split String</name>
+              <title>String.Split String</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052431484" status="passed" stop="1534052431484">
+              <name>BuiltIn.Log Many</name>
+              <title>BuiltIn.Log Many</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052431485" status="passed" stop="1534052431502">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052431486" status="passed" stop="1534052431488">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052431489" status="passed" stop="1534052431489">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052431490" status="passed" stop="1534052431490">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052431490" status="passed" stop="1534052431501">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052431502" status="passed" stop="1534052431519">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052431503" status="passed" stop="1534052431506">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052431506" status="passed" stop="1534052431507">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052431507" status="passed" stop="1534052431508">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052431508" status="passed" stop="1534052431519">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052431520" status="passed" stop="1534052431537">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052431521" status="passed" stop="1534052431524">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052431524" status="passed" stop="1534052431525">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052431525" status="passed" stop="1534052431526">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052431526" status="passed" stop="1534052431537">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052431538" status="passed" stop="1534052431554">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052431538" status="passed" stop="1534052431541">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052431542" status="passed" stop="1534052431542">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052431542" status="passed" stop="1534052431543">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052431543" status="passed" stop="1534052431554">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052431555" status="passed" stop="1534052431816">
+          <name>AutoItLibrary.Win Wait</name>
+          <title>AutoItLibrary.Win Wait</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052431816" status="passed" stop="1534052432936">
+          <name>Get Answer</name>
+          <title>Get Answer</title>
+          <attachments/>
+          <steps>
+            <step start="1534052431817" status="passed" stop="1534052432935">
+              <name>Select Calculator Menu Item</name>
+              <title>Select Calculator Menu Item</title>
+              <attachments/>
+              <steps>
+                <step start="1534052431818" status="passed" stop="1534052431819">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052431819" status="passed" stop="1534052431819">
+                  <name>BuiltIn.Comment</name>
+                  <title>BuiltIn.Comment</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052431820" status="passed" stop="1534052431846">
+                  <name>AutoItLibrary.Send</name>
+                  <title>AutoItLibrary.Send</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052431846" status="passed" stop="1534052432846">
+                  <name>BuiltIn.Sleep</name>
+                  <title>BuiltIn.Sleep</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052432846" status="passed" stop="1534052432908">
+                  <name>AutoItLibrary.Send</name>
+                  <title>AutoItLibrary.Send</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052432909" status="passed" stop="1534052432934">
+                  <name>AutoItLibrary.Send</name>
+                  <title>AutoItLibrary.Send</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052432935" status="passed" stop="1534052432936">
+              <name>AutoItLibrary.Clip Get</name>
+              <title>AutoItLibrary.Clip Get</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052432937" status="passed" stop="1534052432937">
+          <name>BuiltIn.Should Be Equal As Numbers</name>
+          <title>BuiltIn.Should Be Equal As Numbers</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case severity="None" start="1534052432940" status="passed" stop="1534052434545">
+      <description>Get "The Answer" by division.</description>
+      <name>Integer Division</name>
+      <attachments/>
+      <labels>
+        <label name="thread" value="3208"/>
+      </labels>
+      <steps>
+        <step start="1534052432940" status="passed" stop="1534052432941">
+          <name>AutoItLibrary.Win Activate</name>
+          <title>AutoItLibrary.Win Activate</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052432942" status="passed" stop="1534052433035">
+          <name>Click Button</name>
+          <title>Click Button</title>
+          <attachments/>
+          <steps>
+            <step start="1534052432942" status="passed" stop="1534052433020">
+              <name>BuiltIn.Log Many</name>
+              <title>BuiltIn.Log Many</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052433021" status="passed" stop="1534052433021">
+              <name>BuiltIn.Log Many</name>
+              <title>BuiltIn.Log Many</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052433022" status="passed" stop="1534052433022">
+              <name>Collections.Get From Dictionary</name>
+              <title>Collections.Get From Dictionary</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052433022" status="passed" stop="1534052433035">
+              <name>AutoItLibrary.Control Click</name>
+              <title>AutoItLibrary.Control Click</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052433036" status="passed" stop="1534052433161">
+          <name>Click Buttons</name>
+          <title>Click Buttons</title>
+          <attachments/>
+          <steps>
+            <step start="1534052433036" status="passed" stop="1534052433037">
+              <name>String.Split String</name>
+              <title>String.Split String</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052433037" status="passed" stop="1534052433038">
+              <name>BuiltIn.Log Many</name>
+              <title>BuiltIn.Log Many</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052433039" status="passed" stop="1534052433055">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052433039" status="passed" stop="1534052433042">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433043" status="passed" stop="1534052433043">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433043" status="passed" stop="1534052433044">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433044" status="passed" stop="1534052433055">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052433056" status="passed" stop="1534052433073">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052433057" status="passed" stop="1534052433060">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433060" status="passed" stop="1534052433061">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433061" status="passed" stop="1534052433061">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433062" status="passed" stop="1534052433073">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052433074" status="passed" stop="1534052433090">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052433074" status="passed" stop="1534052433077">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433077" status="passed" stop="1534052433078">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433078" status="passed" stop="1534052433078">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433079" status="passed" stop="1534052433089">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052433090" status="passed" stop="1534052433107">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052433091" status="passed" stop="1534052433094">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433094" status="passed" stop="1534052433094">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433095" status="passed" stop="1534052433095">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433096" status="passed" stop="1534052433107">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052433108" status="passed" stop="1534052433124">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052433108" status="passed" stop="1534052433111">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433111" status="passed" stop="1534052433112">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433112" status="passed" stop="1534052433112">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433113" status="passed" stop="1534052433124">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052433125" status="passed" stop="1534052433144">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052433126" status="passed" stop="1534052433130">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433131" status="passed" stop="1534052433132">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433132" status="passed" stop="1534052433132">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433133" status="passed" stop="1534052433144">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052433145" status="passed" stop="1534052433161">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052433145" status="passed" stop="1534052433148">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433148" status="passed" stop="1534052433149">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433149" status="passed" stop="1534052433149">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433150" status="passed" stop="1534052433161">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052433162" status="passed" stop="1534052433422">
+          <name>AutoItLibrary.Win Wait</name>
+          <title>AutoItLibrary.Win Wait</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052433422" status="passed" stop="1534052434542">
+          <name>Get Answer</name>
+          <title>Get Answer</title>
+          <attachments/>
+          <steps>
+            <step start="1534052433423" status="passed" stop="1534052434540">
+              <name>Select Calculator Menu Item</name>
+              <title>Select Calculator Menu Item</title>
+              <attachments/>
+              <steps>
+                <step start="1534052433423" status="passed" stop="1534052433424">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433424" status="passed" stop="1534052433425">
+                  <name>BuiltIn.Comment</name>
+                  <title>BuiltIn.Comment</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433425" status="passed" stop="1534052433451">
+                  <name>AutoItLibrary.Send</name>
+                  <title>AutoItLibrary.Send</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052433451" status="passed" stop="1534052434451">
+                  <name>BuiltIn.Sleep</name>
+                  <title>BuiltIn.Sleep</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052434451" status="passed" stop="1534052434513">
+                  <name>AutoItLibrary.Send</name>
+                  <title>AutoItLibrary.Send</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052434514" status="passed" stop="1534052434540">
+                  <name>AutoItLibrary.Send</name>
+                  <title>AutoItLibrary.Send</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052434541" status="passed" stop="1534052434541">
+              <name>AutoItLibrary.Clip Get</name>
+              <title>AutoItLibrary.Clip Get</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052434542" status="passed" stop="1534052434543">
+          <name>BuiltIn.Should Be Equal As Numbers</name>
+          <title>BuiltIn.Should Be Equal As Numbers</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case severity="None" start="1534052434545" status="passed" stop="1534052438439">
+      <description>Test Hex addition.</description>
+      <name>Hex Addition</name>
+      <attachments/>
+      <labels>
+        <label name="thread" value="3208"/>
+      </labels>
+      <steps>
+        <step start="1534052434546" status="passed" stop="1534052435665">
+          <name>Select Calculator Menu Item</name>
+          <title>Select Calculator Menu Item</title>
+          <attachments/>
+          <steps>
+            <step start="1534052434547" status="passed" stop="1534052434547">
+              <name>Collections.Get From Dictionary</name>
+              <title>Collections.Get From Dictionary</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052434548" status="passed" stop="1534052434548">
+              <name>BuiltIn.Comment</name>
+              <title>BuiltIn.Comment</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052434548" status="passed" stop="1534052434574">
+              <name>AutoItLibrary.Send</name>
+              <title>AutoItLibrary.Send</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052434575" status="passed" stop="1534052435575">
+              <name>BuiltIn.Sleep</name>
+              <title>BuiltIn.Sleep</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052435575" status="passed" stop="1534052435637">
+              <name>AutoItLibrary.Send</name>
+              <title>AutoItLibrary.Send</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052435638" status="passed" stop="1534052435664">
+              <name>AutoItLibrary.Send</name>
+              <title>AutoItLibrary.Send</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052435665" status="passed" stop="1534052435705">
+          <name>Click Buttons</name>
+          <title>Click Buttons</title>
+          <attachments/>
+          <steps>
+            <step start="1534052435666" status="passed" stop="1534052435667">
+              <name>String.Split String</name>
+              <title>String.Split String</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052435667" status="passed" stop="1534052435668">
+              <name>BuiltIn.Log Many</name>
+              <title>BuiltIn.Log Many</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052435668" status="passed" stop="1534052435685">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052435669" status="passed" stop="1534052435671">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052435672" status="passed" stop="1534052435672">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052435673" status="passed" stop="1534052435673">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052435673" status="passed" stop="1534052435684">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052435686" status="passed" stop="1534052435704">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052435687" status="passed" stop="1534052435690">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052435691" status="passed" stop="1534052435691">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052435691" status="passed" stop="1534052435692">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052435692" status="passed" stop="1534052435703">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052435705" status="passed" stop="1534052436706">
+          <name>BuiltIn.Sleep</name>
+          <title>BuiltIn.Sleep</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052436707" status="passed" stop="1534052436840">
+          <name>AutoItLibrary.Send</name>
+          <title>AutoItLibrary.Send</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052436840" status="passed" stop="1534052436881">
+          <name>AutoItLibrary.Send</name>
+          <title>AutoItLibrary.Send</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052436882" status="passed" stop="1534052437024">
+          <name>AutoItLibrary.Send</name>
+          <title>AutoItLibrary.Send</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052437025" status="passed" stop="1534052437056">
+          <name>AutoItLibrary.Send</name>
+          <title>AutoItLibrary.Send</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052437056" status="passed" stop="1534052437316">
+          <name>AutoItLibrary.Win Wait</name>
+          <title>AutoItLibrary.Win Wait</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052437316" status="passed" stop="1534052438437">
+          <name>Get Answer</name>
+          <title>Get Answer</title>
+          <attachments/>
+          <steps>
+            <step start="1534052437317" status="passed" stop="1534052438435">
+              <name>Select Calculator Menu Item</name>
+              <title>Select Calculator Menu Item</title>
+              <attachments/>
+              <steps>
+                <step start="1534052437317" status="passed" stop="1534052437318">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052437318" status="passed" stop="1534052437318">
+                  <name>BuiltIn.Comment</name>
+                  <title>BuiltIn.Comment</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052437319" status="passed" stop="1534052437345">
+                  <name>AutoItLibrary.Send</name>
+                  <title>AutoItLibrary.Send</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052437345" status="passed" stop="1534052438346">
+                  <name>BuiltIn.Sleep</name>
+                  <title>BuiltIn.Sleep</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052438347" status="passed" stop="1534052438409">
+                  <name>AutoItLibrary.Send</name>
+                  <title>AutoItLibrary.Send</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052438409" status="passed" stop="1534052438435">
+                  <name>AutoItLibrary.Send</name>
+                  <title>AutoItLibrary.Send</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052438436" status="passed" stop="1534052438436">
+              <name>AutoItLibrary.Clip Get</name>
+              <title>AutoItLibrary.Clip Get</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052438437" status="passed" stop="1534052438437">
+          <name>BuiltIn.Should Be Equal As Strings</name>
+          <title>BuiltIn.Should Be Equal As Strings</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case severity="None" start="1534052438440" status="passed" stop="1534052444805">
+      <description>Test Hex subtraction.</description>
+      <name>Hex Subtraction</name>
+      <attachments/>
+      <labels>
+        <label name="thread" value="3208"/>
+      </labels>
+      <steps>
+        <step start="1534052438441" status="passed" stop="1534052439558">
+          <name>Select Calculator Menu Item</name>
+          <title>Select Calculator Menu Item</title>
+          <attachments/>
+          <steps>
+            <step start="1534052438441" status="passed" stop="1534052438442">
+              <name>Collections.Get From Dictionary</name>
+              <title>Collections.Get From Dictionary</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052438442" status="passed" stop="1534052438442">
+              <name>BuiltIn.Comment</name>
+              <title>BuiltIn.Comment</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052438443" status="passed" stop="1534052438469">
+              <name>AutoItLibrary.Send</name>
+              <title>AutoItLibrary.Send</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052438469" status="passed" stop="1534052439469">
+              <name>BuiltIn.Sleep</name>
+              <title>BuiltIn.Sleep</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052439469" status="passed" stop="1534052439531">
+              <name>AutoItLibrary.Send</name>
+              <title>AutoItLibrary.Send</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052439532" status="passed" stop="1534052439558">
+              <name>AutoItLibrary.Send</name>
+              <title>AutoItLibrary.Send</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052439558" status="passed" stop="1534052439595">
+          <name>Click Buttons</name>
+          <title>Click Buttons</title>
+          <attachments/>
+          <steps>
+            <step start="1534052439559" status="passed" stop="1534052439559">
+              <name>String.Split String</name>
+              <title>String.Split String</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052439560" status="passed" stop="1534052439560">
+              <name>BuiltIn.Log Many</name>
+              <title>BuiltIn.Log Many</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052439561" status="passed" stop="1534052439577">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052439561" status="passed" stop="1534052439564">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052439564" status="passed" stop="1534052439565">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052439565" status="passed" stop="1534052439566">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052439566" status="passed" stop="1534052439577">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052439578" status="passed" stop="1534052439595">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052439578" status="passed" stop="1534052439581">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052439581" status="passed" stop="1534052439582">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052439582" status="passed" stop="1534052439583">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052439583" status="passed" stop="1534052439594">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052439595" status="passed" stop="1534052440596">
+          <name>BuiltIn.Sleep</name>
+          <title>BuiltIn.Sleep</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052440597" status="passed" stop="1534052440597">
+          <name>AutoItLibrary.Clip Put</name>
+          <title>AutoItLibrary.Clip Put</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052440598" status="passed" stop="1534052441716">
+          <name>Select Calculator Menu Item</name>
+          <title>Select Calculator Menu Item</title>
+          <attachments/>
+          <steps>
+            <step start="1534052440598" status="passed" stop="1534052440599">
+              <name>Collections.Get From Dictionary</name>
+              <title>Collections.Get From Dictionary</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052440599" status="passed" stop="1534052440599">
+              <name>BuiltIn.Comment</name>
+              <title>BuiltIn.Comment</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052440600" status="passed" stop="1534052440626">
+              <name>AutoItLibrary.Send</name>
+              <title>AutoItLibrary.Send</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052440626" status="passed" stop="1534052441626">
+              <name>BuiltIn.Sleep</name>
+              <title>BuiltIn.Sleep</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052441626" status="passed" stop="1534052441688">
+              <name>AutoItLibrary.Send</name>
+              <title>AutoItLibrary.Send</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052441689" status="passed" stop="1534052441715">
+              <name>AutoItLibrary.Send</name>
+              <title>AutoItLibrary.Send</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052441716" status="passed" stop="1534052441976">
+          <name>AutoItLibrary.Win Wait</name>
+          <title>AutoItLibrary.Win Wait</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052441976" status="passed" stop="1534052442009">
+          <name>AutoItLibrary.Send</name>
+          <title>AutoItLibrary.Send</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052442009" status="passed" stop="1534052442009">
+          <name>AutoItLibrary.Clip Put</name>
+          <title>AutoItLibrary.Clip Put</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052442010" status="passed" stop="1534052443130">
+          <name>Select Calculator Menu Item</name>
+          <title>Select Calculator Menu Item</title>
+          <attachments/>
+          <steps>
+            <step start="1534052442010" status="passed" stop="1534052442011">
+              <name>Collections.Get From Dictionary</name>
+              <title>Collections.Get From Dictionary</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052442011" status="passed" stop="1534052442011">
+              <name>BuiltIn.Comment</name>
+              <title>BuiltIn.Comment</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052442012" status="passed" stop="1534052442038">
+              <name>AutoItLibrary.Send</name>
+              <title>AutoItLibrary.Send</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052442038" status="passed" stop="1534052443038">
+              <name>BuiltIn.Sleep</name>
+              <title>BuiltIn.Sleep</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052443038" status="passed" stop="1534052443103">
+              <name>AutoItLibrary.Send</name>
+              <title>AutoItLibrary.Send</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052443103" status="passed" stop="1534052443129">
+              <name>AutoItLibrary.Send</name>
+              <title>AutoItLibrary.Send</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052443130" status="passed" stop="1534052443390">
+          <name>AutoItLibrary.Win Wait</name>
+          <title>AutoItLibrary.Win Wait</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052443390" status="passed" stop="1534052443422">
+          <name>AutoItLibrary.Send</name>
+          <title>AutoItLibrary.Send</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052443422" status="passed" stop="1534052443682">
+          <name>AutoItLibrary.Win Wait</name>
+          <title>AutoItLibrary.Win Wait</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052443682" status="passed" stop="1534052444802">
+          <name>Get Answer</name>
+          <title>Get Answer</title>
+          <attachments/>
+          <steps>
+            <step start="1534052443683" status="passed" stop="1534052444801">
+              <name>Select Calculator Menu Item</name>
+              <title>Select Calculator Menu Item</title>
+              <attachments/>
+              <steps>
+                <step start="1534052443683" status="passed" stop="1534052443684">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052443684" status="passed" stop="1534052443685">
+                  <name>BuiltIn.Comment</name>
+                  <title>BuiltIn.Comment</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052443685" status="passed" stop="1534052443711">
+                  <name>AutoItLibrary.Send</name>
+                  <title>AutoItLibrary.Send</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052443711" status="passed" stop="1534052444712">
+                  <name>BuiltIn.Sleep</name>
+                  <title>BuiltIn.Sleep</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052444712" status="passed" stop="1534052444774">
+                  <name>AutoItLibrary.Send</name>
+                  <title>AutoItLibrary.Send</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052444774" status="passed" stop="1534052444800">
+                  <name>AutoItLibrary.Send</name>
+                  <title>AutoItLibrary.Send</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052444801" status="passed" stop="1534052444802">
+              <name>AutoItLibrary.Clip Get</name>
+              <title>AutoItLibrary.Clip Get</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052444803" status="passed" stop="1534052444803">
+          <name>BuiltIn.Should Be Equal As Strings</name>
+          <title>BuiltIn.Should Be Equal As Strings</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case severity="None" start="1534052444806" status="failed" stop="1534052450665">
+      <description>Test that a screenshot is taken and included in the report file when an AutoItLibrary keyword fails.
+This test will always fail.</description>
+      <name>Test Screen Capture On FAIL</name>
+      <failure>
+        <message>Window '计算器' (DEADBEAT) failed to appear in 3 seconds</message>
+        <stack-trace></stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="issue" value="ExpectedFAIL"/>
+        <label name="thread" value="3208"/>
+      </labels>
+      <steps>
+        <step start="1534052444807" status="passed" stop="1534052445925">
+          <name>Select Calculator Menu Item</name>
+          <title>Select Calculator Menu Item</title>
+          <attachments/>
+          <steps>
+            <step start="1534052444807" status="passed" stop="1534052444808">
+              <name>Collections.Get From Dictionary</name>
+              <title>Collections.Get From Dictionary</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052444809" status="passed" stop="1534052444809">
+              <name>BuiltIn.Comment</name>
+              <title>BuiltIn.Comment</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052444809" status="passed" stop="1534052444835">
+              <name>AutoItLibrary.Send</name>
+              <title>AutoItLibrary.Send</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052444836" status="passed" stop="1534052445836">
+              <name>BuiltIn.Sleep</name>
+              <title>BuiltIn.Sleep</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052445836" status="passed" stop="1534052445898">
+              <name>AutoItLibrary.Send</name>
+              <title>AutoItLibrary.Send</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052445898" status="passed" stop="1534052445924">
+              <name>AutoItLibrary.Send</name>
+              <title>AutoItLibrary.Send</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052445925" status="passed" stop="1534052445962">
+          <name>Click Buttons</name>
+          <title>Click Buttons</title>
+          <attachments/>
+          <steps>
+            <step start="1534052445926" status="passed" stop="1534052445926">
+              <name>String.Split String</name>
+              <title>String.Split String</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052445926" status="passed" stop="1534052445927">
+              <name>BuiltIn.Log Many</name>
+              <title>BuiltIn.Log Many</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052445928" status="passed" stop="1534052445944">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052445928" status="passed" stop="1534052445931">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052445931" status="passed" stop="1534052445932">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052445932" status="passed" stop="1534052445932">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052445933" status="passed" stop="1534052445943">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1534052445944" status="passed" stop="1534052445961">
+              <name>Click Button</name>
+              <title>Click Button</title>
+              <attachments/>
+              <steps>
+                <step start="1534052445945" status="passed" stop="1534052445948">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052445948" status="passed" stop="1534052445948">
+                  <name>BuiltIn.Log Many</name>
+                  <title>BuiltIn.Log Many</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052445949" status="passed" stop="1534052445949">
+                  <name>Collections.Get From Dictionary</name>
+                  <title>Collections.Get From Dictionary</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1534052445950" status="passed" stop="1534052445961">
+                  <name>AutoItLibrary.Control Click</name>
+                  <title>AutoItLibrary.Control Click</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+          </steps>
+        </step>
+        <step start="1534052445962" status="passed" stop="1534052446963">
+          <name>BuiltIn.Sleep</name>
+          <title>BuiltIn.Sleep</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052446964" status="passed" stop="1534052447097">
+          <name>AutoItLibrary.Send</name>
+          <title>AutoItLibrary.Send</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052447097" status="passed" stop="1534052447138">
+          <name>AutoItLibrary.Send</name>
+          <title>AutoItLibrary.Send</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052447139" status="passed" stop="1534052447281">
+          <name>AutoItLibrary.Send</name>
+          <title>AutoItLibrary.Send</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052447282" status="passed" stop="1534052447313">
+          <name>AutoItLibrary.Send</name>
+          <title>AutoItLibrary.Send</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052447313" status="failed" stop="1534052450663">
+          <name>AutoItLibrary.Win Wait</name>
+          <title>AutoItLibrary.Win Wait</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052450667" status="passed" stop="1534052451167">
+          <name>AutoItLibrary.Win Activate</name>
+          <title>AutoItLibrary.Win Activate</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1534052451167" status="passed" stop="1534052452271">
+          <name>Select Calculator Menu Item</name>
+          <title>Select Calculator Menu Item</title>
+          <attachments/>
+          <steps>
+            <step start="1534052451168" status="passed" stop="1534052451169">
+              <name>Collections.Get From Dictionary</name>
+              <title>Collections.Get From Dictionary</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052451169" status="passed" stop="1534052451169">
+              <name>BuiltIn.Comment</name>
+              <title>BuiltIn.Comment</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052451169" status="passed" stop="1534052451195">
+              <name>AutoItLibrary.Send</name>
+              <title>AutoItLibrary.Send</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052451196" status="passed" stop="1534052452196">
+              <name>BuiltIn.Sleep</name>
+              <title>BuiltIn.Sleep</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052452196" status="passed" stop="1534052452229">
+              <name>AutoItLibrary.Send</name>
+              <title>AutoItLibrary.Send</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1534052452229" status="passed" stop="1534052452270">
+              <name>AutoItLibrary.Send</name>
+              <title>AutoItLibrary.Send</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

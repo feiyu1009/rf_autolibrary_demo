@@ -1,0 +1,3956 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180812 13:42:55.630" generator="Robot 3.0.4 (Python 2.7.15 on win32)">
+<suite source="E:\rf_project\AutoItLibrary\tests\Calculator_Test_Cases.html" id="s1" name="Calculator Test Cases">
+<kw type="setup" name="Start Calculator">
+<doc>Start the Windows Calculator application and set the default settings that the rest of the tests expect.</doc>
+<kw name="Run" library="AutoItLibrary">
+<doc>Direct wrapper for AutoIt's Run method.</doc>
+<arguments>
+<arg>calc.exe</arg>
+</arguments>
+<msg timestamp="20180812 13:42:57.519" level="INFO">AutoItLibrary.Run(FileName='calc.exe', WorkingDir='', Flag='')</msg>
+<status status="PASS" endtime="20180812 13:42:57.519" starttime="20180812 13:42:57.429"></status>
+</kw>
+<kw name="Wait For Active Window" library="AutoItLibrary">
+<doc>Wait up to _TimeOut_ seconds for the window with the given _WindowTitle_ and optional</doc>
+<arguments>
+<arg>计算器</arg>
+</arguments>
+<msg timestamp="20180812 13:42:58.455" level="INFO">AutoItLibrary.WaitForActiveWindow(WindowTitle='\u8ba1\u7b97\u5668', WindowText='', TimeOut=-1)</msg>
+<msg timestamp="20180812 13:42:58.455" level="INFO">AutoItLibrary.WinWait(WindowTitle='\u8ba1\u7b97\u5668', WindowText='', TimeOut=10)</msg>
+<msg timestamp="20180812 13:42:58.455" level="INFO">AutoItLibrary.WinWaitActive(WindowTitle='\u8ba1\u7b97\u5668', WindowText='', TimeOut=10)</msg>
+<status status="PASS" endtime="20180812 13:42:58.455" starttime="20180812 13:42:57.520"></status>
+</kw>
+<kw name="Get Calculator Version">
+<doc>Get the version of the Windows Calculator. Version 5.1 is WinXP, Version 6.1 is Win7.</doc>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTDOWN}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:42:58.495" starttime="20180812 13:42:58.469"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180812 13:42:59.496" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180812 13:42:59.496" starttime="20180812 13:42:58.495"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>ha</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:42:59.539" starttime="20180812 13:42:59.496"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTUP}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:42:59.565" starttime="20180812 13:42:59.539"></status>
+</kw>
+<kw name="Win Wait Active" library="AutoItLibrary">
+<doc>Direct wrapper for AutoIt's WinWaitActive method.</doc>
+<arguments>
+<arg>关于“计算器”</arg>
+<arg>版本</arg>
+</arguments>
+<msg timestamp="20180812 13:42:59.851" level="INFO">AutoItLibrary.WinWaitActive(WindowTitle='\u5173\u4e8e\u201c\u8ba1\u7b97\u5668\u201d', WindowText='\u7248\u672c', TimeOut=10)</msg>
+<status status="PASS" endtime="20180812 13:42:59.851" starttime="20180812 13:42:59.566"></status>
+</kw>
+<kw name="Control Get Text" library="AutoItLibrary">
+<doc>method ControlGetText</doc>
+<arguments>
+<arg>关于“计算器”</arg>
+<arg>版本</arg>
+<arg>Static3</arg>
+</arguments>
+<assign>
+<var>${WinText}</var>
+</assign>
+<msg timestamp="20180812 13:42:59.865" level="INFO">${WinText} = Microsoft Windows</msg>
+<status status="PASS" endtime="20180812 13:42:59.865" starttime="20180812 13:42:59.851"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"版本" not in "${WinText}"</arg>
+<arg>Control Get Text</arg>
+<arg>关于“计算器”</arg>
+<arg>版本</arg>
+<arg>Static4</arg>
+</arguments>
+<assign>
+<var>${WinText2}</var>
+</assign>
+<kw name="Control Get Text" library="AutoItLibrary">
+<doc>method ControlGetText</doc>
+<arguments>
+<arg>关于“计算器”</arg>
+<arg>版本</arg>
+<arg>Static4</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:42:59.867" starttime="20180812 13:42:59.866"></status>
+</kw>
+<msg timestamp="20180812 13:42:59.867" level="INFO">${WinText2} = 版本 6.1 (内部版本 7601: Service Pack 1)</msg>
+<status status="PASS" endtime="20180812 13:42:59.867" starttime="20180812 13:42:59.865"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>"版本" in "${WinText2}"</arg>
+<arg>${WinText2}</arg>
+<arg>${WinText}</arg>
+</arguments>
+<assign>
+<var>${WinText}</var>
+</assign>
+<msg timestamp="20180812 13:42:59.868" level="INFO">${WinText} = 版本 6.1 (内部版本 7601: Service Pack 1)</msg>
+<status status="PASS" endtime="20180812 13:42:59.868" starttime="20180812 13:42:59.867"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"版本" not in "${WinText}"</arg>
+<arg>Fail</arg>
+<arg>Cannot find Calculator version</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:42:59.869" starttime="20180812 13:42:59.868"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>"5.1" in "${WinText}"</arg>
+<arg>${GUIMAP_51}</arg>
+</arguments>
+<assign>
+<var>${GUIMAP}</var>
+</assign>
+<msg timestamp="20180812 13:42:59.869" level="INFO">${GUIMAP} = None</msg>
+<status status="PASS" endtime="20180812 13:42:59.869" starttime="20180812 13:42:59.869"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>"6.0" in "${WinText}"</arg>
+<arg>${GUIMAP_60}</arg>
+<arg>${GUIMAP}</arg>
+</arguments>
+<assign>
+<var>${GUIMAP}</var>
+</assign>
+<msg timestamp="20180812 13:42:59.870" level="INFO">${GUIMAP} = None</msg>
+<status status="PASS" endtime="20180812 13:42:59.870" starttime="20180812 13:42:59.870"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>"6.1" in "${WinText}"</arg>
+<arg>${GUIMAP_61}</arg>
+<arg>${GUIMAP}</arg>
+</arguments>
+<assign>
+<var>${GUIMAP}</var>
+</assign>
+<msg timestamp="20180812 13:42:59.871" level="INFO">${GUIMAP} = {'Hex': 'Button1', 'Dword': 'Button6', 'Oct': 'Button3', 'Bin': 'Button4', '1': 'Button5', '+': 'Button23', '*': 'Button21', '-': 'Button22', '/': 'Button20', 'Qword': 'Button5', '0': 'Button6', '3': ...</msg>
+<status status="PASS" endtime="20180812 13:42:59.871" starttime="20180812 13:42:59.871"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${GUIMAP} == None</arg>
+<arg>Fail</arg>
+<arg>Calculator version not supported: ${WinText}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:42:59.872" starttime="20180812 13:42:59.872"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+</arguments>
+<msg timestamp="20180812 13:42:59.873" level="INFO">${GUIMAP} = {'Hex': 'Button1', 'Dword': 'Button6', 'Oct': 'Button3', 'Bin': 'Button4', '1': 'Button5', '+': 'Button23', '*': 'Button21', '-': 'Button22', '/': 'Button20', 'Qword': 'Button5', '0': 'Button6', '3': ...</msg>
+<status status="PASS" endtime="20180812 13:42:59.873" starttime="20180812 13:42:59.872"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>"5.1" in "${WinText}"</arg>
+<arg>${MENUMAP_51}</arg>
+</arguments>
+<assign>
+<var>${MENUMAP}</var>
+</assign>
+<msg timestamp="20180812 13:42:59.874" level="INFO">${MENUMAP} = None</msg>
+<status status="PASS" endtime="20180812 13:42:59.874" starttime="20180812 13:42:59.873"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>"6.0" in "${WinText}"</arg>
+<arg>${MENUMAP_60}</arg>
+<arg>${MENUMAP}</arg>
+</arguments>
+<assign>
+<var>${MENUMAP}</var>
+</assign>
+<msg timestamp="20180812 13:42:59.875" level="INFO">${MENUMAP} = None</msg>
+<status status="PASS" endtime="20180812 13:42:59.875" starttime="20180812 13:42:59.874"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>"6.1" in "${WinText}"</arg>
+<arg>${MENUMAP_61}</arg>
+<arg>${MENUMAP}</arg>
+</arguments>
+<assign>
+<var>${MENUMAP}</var>
+</assign>
+<msg timestamp="20180812 13:42:59.876" level="INFO">${MENUMAP} = {'View Scientific': 'VS', 'View Decimal': 'VD', 'Exit': '{F4}', 'View Digit grouping': 'VI', 'View Standard': 'VT', 'View Hex': 'VP', 'Edit Copy': 'EC', 'Edit Paste': 'EP'}</msg>
+<status status="PASS" endtime="20180812 13:42:59.876" starttime="20180812 13:42:59.875"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${MENUMAP}</arg>
+</arguments>
+<msg timestamp="20180812 13:42:59.876" level="INFO">${MENUMAP} = {'View Scientific': 'VS', 'View Decimal': 'VD', 'Exit': '{F4}', 'View Digit grouping': 'VI', 'View Standard': 'VT', 'View Hex': 'VP', 'Edit Copy': 'EC', 'Edit Paste': 'EP'}</msg>
+<status status="PASS" endtime="20180812 13:42:59.877" starttime="20180812 13:42:59.876"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>关于“计算器”</arg>
+<arg>版本</arg>
+<arg>Button1</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:42:59.888" starttime="20180812 13:42:59.877"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:42:59.889" starttime="20180812 13:42:58.469"></status>
+</kw>
+<kw name="Select Calculator Menu Item">
+<doc>The Windows Calculator application doesn't really use a Windows GUI Menu to implement its menus. Therefore AutoIt can't see the menus as menu GUI objects. The only way to access the Calculator menus is via the ALT key sequences. In Win XP the Calculator menu ALT key letters are underlined, and thus available, all the time. Microsoft, in their wisdom, changed this in Win Vista so that you have to press the ALT key and "wait a bit" before the ALT key letters are underlined on the GUI. When they're not underlined, they don't work. Since AutoIt can send ALT key sequences VERY FAST, a sequence such as !VS (ALT+V+S) doesn't work on Win Vista, while it does work on Win XP. To get around this problem, and to make menu item selection more "tester friendly" we provide this keyword. It takes the name of a menu item as defined in the MENUMAP dictionary in the CalculatorGUIMap.py file. The MENUMAP dictionary items translate the application oriented menu name into the sequence of ALT keys to access that menu item. To make this work on Win XP and Win Vista, this keyword sends the ALT key first, waits a bit, then sends the sequence of keys from the MENUMAP. Complicated, but welcome to the wierd world of Windows GUI testing!</doc>
+<arguments>
+<arg>View Scientific</arg>
+</arguments>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${MENUMAP}</arg>
+<arg>${MenuItem}</arg>
+</arguments>
+<assign>
+<var>${AltKeys}</var>
+</assign>
+<msg timestamp="20180812 13:42:59.890" level="INFO">${AltKeys} = VS</msg>
+<status status="PASS" endtime="20180812 13:42:59.890" starttime="20180812 13:42:59.890"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${AltKeys} =</arg>
+<arg>Set Variable</arg>
+<arg>VS</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:42:59.891" starttime="20180812 13:42:59.891"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTDOWN}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:42:59.917" starttime="20180812 13:42:59.891"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180812 13:43:00.918" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180812 13:43:00.918" starttime="20180812 13:42:59.918"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>${AltKeys}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:00.980" starttime="20180812 13:43:00.918"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTUP}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:01.007" starttime="20180812 13:43:00.981"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:01.008" starttime="20180812 13:42:59.889"></status>
+</kw>
+<kw name="Wait For Active Window" library="AutoItLibrary">
+<doc>Wait up to _TimeOut_ seconds for the window with the given _WindowTitle_ and optional</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>弧度</arg>
+</arguments>
+<msg timestamp="20180812 13:43:01.554" level="INFO">AutoItLibrary.WaitForActiveWindow(WindowTitle='\u8ba1\u7b97\u5668', WindowText='\u5f27\u5ea6', TimeOut=-1)</msg>
+<msg timestamp="20180812 13:43:01.554" level="INFO">AutoItLibrary.WinWait(WindowTitle='\u8ba1\u7b97\u5668', WindowText='\u5f27\u5ea6', TimeOut=10)</msg>
+<msg timestamp="20180812 13:43:01.554" level="INFO">AutoItLibrary.WinWaitActive(WindowTitle='\u8ba1\u7b97\u5668', WindowText='\u5f27\u5ea6', TimeOut=10)</msg>
+<status status="PASS" endtime="20180812 13:43:01.554" starttime="20180812 13:43:01.008"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>We want "Digit Grouping" off but there's no way to examine the check beside the menu item. So we need to try recognizing some displayed digits to see if its on or off and then change it if necessary.</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:01.555" starttime="20180812 13:43:01.554"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>12345</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:01.627" starttime="20180812 13:43:01.555"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Win Wait</arg>
+<arg>计算器</arg>
+<arg>12345</arg>
+<arg>3</arg>
+</arguments>
+<assign>
+<var>${Result}</var>
+<var>${ErrMsg}</var>
+</assign>
+<kw name="Win Wait" library="AutoItLibrary">
+<doc>Direct wrapper for AutoIt's WinWait method.</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>12345</arg>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20180812 13:43:01.888" level="INFO">AutoItLibrary.WinWait(WindowTitle='\u8ba1\u7b97\u5668', WindowText='12345', TimeOut='3')</msg>
+<status status="PASS" endtime="20180812 13:43:01.888" starttime="20180812 13:43:01.628"></status>
+</kw>
+<msg timestamp="20180812 13:43:01.888" level="INFO">${Result} = PASS</msg>
+<msg timestamp="20180812 13:43:01.888" level="INFO">${ErrMsg} = None</msg>
+<status status="PASS" endtime="20180812 13:43:01.888" starttime="20180812 13:43:01.627"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${Result}" == "FAIL"</arg>
+<arg>Select Calculator Menu Item</arg>
+<arg>View Digit grouping</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:01.889" starttime="20180812 13:43:01.889"></status>
+</kw>
+<kw name="Win Wait" library="AutoItLibrary">
+<doc>Direct wrapper for AutoIt's WinWait method.</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>12345</arg>
+</arguments>
+<msg timestamp="20180812 13:43:02.151" level="INFO">AutoItLibrary.WinWait(WindowTitle='\u8ba1\u7b97\u5668', WindowText='12345', TimeOut=10)</msg>
+<status status="PASS" endtime="20180812 13:43:02.151" starttime="20180812 13:43:01.890"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Click Button</arg>
+<arg>Clear</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:02.152" starttime="20180812 13:43:02.151"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>Button13</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:02.163" starttime="20180812 13:43:02.152"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:02.163" starttime="20180812 13:42:57.429"></status>
+</kw>
+<test id="s1-t1" name="Integer Addition">
+<kw type="setup" name="Clear Calculator">
+<doc>Click the Clear button in the Windows Calculator</doc>
+<kw name="Win Activate" library="AutoItLibrary">
+<doc>method WinActivate</doc>
+<arguments>
+<arg>Calculator</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:02.166" starttime="20180812 13:43:02.165"></status>
+</kw>
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>Clear</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:02.167" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:02.168" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:02.168" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:02.168" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:02.168" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:02.168" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:02.168" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:02.168" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:02.168" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:02.168" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:02.168" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:02.168" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:02.168" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:02.168" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:02.169" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:02.169" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:02.169" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:02.169" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:02.169" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:02.169" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:02.169" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:02.169" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:02.169" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:02.169" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:02.169" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:02.169" starttime="20180812 13:43:02.167"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:02.170" level="INFO">Clear"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:02.170" starttime="20180812 13:43:02.170"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:02.171" level="INFO">${ButtonName} = Button13</msg>
+<status status="PASS" endtime="20180812 13:43:02.171" starttime="20180812 13:43:02.170"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:02.182" starttime="20180812 13:43:02.171"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:02.182" starttime="20180812 13:43:02.166"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:02.183" starttime="20180812 13:43:02.164"></status>
+</kw>
+<kw name="Click Buttons">
+<doc>Click a sequence of buttons by their text names, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>4 1 + 1 =</arg>
+</arguments>
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${ButtonNames}</arg>
+</arguments>
+<assign>
+<var>@{Buttons}</var>
+</assign>
+<msg timestamp="20180812 13:43:02.184" level="INFO">@{Buttons} = [ 4 | 1 | + | 1 | = ]</msg>
+<status status="PASS" endtime="20180812 13:43:02.184" starttime="20180812 13:43:02.184"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>@{Buttons}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:02.203" level="INFO">4</msg>
+<msg timestamp="20180812 13:43:02.203" level="INFO">1</msg>
+<msg timestamp="20180812 13:43:02.203" level="INFO">+</msg>
+<msg timestamp="20180812 13:43:02.203" level="INFO">1</msg>
+<msg timestamp="20180812 13:43:02.204" level="INFO">=</msg>
+<status status="PASS" endtime="20180812 13:43:02.204" starttime="20180812 13:43:02.203"></status>
+</kw>
+<kw type="for" name="${ButtonName} IN [ @{Buttons} ]">
+<kw type="foritem" name="${ButtonName} = 4">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:02.206" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:02.206" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:02.206" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:02.206" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:02.206" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:02.206" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:02.206" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:02.206" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:02.206" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:02.207" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:02.207" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:02.207" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:02.207" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:02.207" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:02.207" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:02.207" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:02.207" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:02.207" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:02.207" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:02.207" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:02.207" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:02.207" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:02.208" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:02.208" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:02.208" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:02.208" starttime="20180812 13:43:02.205"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:02.209" level="INFO">4"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:02.209" starttime="20180812 13:43:02.208"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:02.210" level="INFO">${ButtonName} = Button4</msg>
+<status status="PASS" endtime="20180812 13:43:02.210" starttime="20180812 13:43:02.209"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:02.221" starttime="20180812 13:43:02.210"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:02.221" starttime="20180812 13:43:02.204"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:02.221" starttime="20180812 13:43:02.204"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = 1">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:02.223" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:02.223" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:02.223" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:02.223" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:02.224" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:02.224" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:02.224" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:02.224" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:02.224" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:02.224" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:02.224" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:02.224" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:02.224" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:02.224" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:02.224" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:02.224" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:02.225" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:02.225" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:02.225" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:02.225" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:02.225" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:02.225" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:02.225" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:02.225" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:02.225" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:02.225" starttime="20180812 13:43:02.223"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:02.226" level="INFO">1"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:02.226" starttime="20180812 13:43:02.226"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:02.227" level="INFO">${ButtonName} = Button5</msg>
+<status status="PASS" endtime="20180812 13:43:02.227" starttime="20180812 13:43:02.226"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:02.238" starttime="20180812 13:43:02.227"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:02.238" starttime="20180812 13:43:02.222"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:02.239" starttime="20180812 13:43:02.221"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = +">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:02.241" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:02.241" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:02.241" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:02.241" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:02.241" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:02.241" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:02.241" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:02.241" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:02.241" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:02.241" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:02.241" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:02.241" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:02.242" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:02.242" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:02.242" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:02.242" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:02.242" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:02.242" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:02.242" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:02.242" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:02.242" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:02.242" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:02.242" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:02.242" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:02.242" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:02.243" starttime="20180812 13:43:02.240"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:02.243" level="INFO">+"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:02.243" starttime="20180812 13:43:02.243"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:02.244" level="INFO">${ButtonName} = Button23</msg>
+<status status="PASS" endtime="20180812 13:43:02.244" starttime="20180812 13:43:02.244"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:02.255" starttime="20180812 13:43:02.244"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:02.256" starttime="20180812 13:43:02.239"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:02.256" starttime="20180812 13:43:02.239"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = 1">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:02.258" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:02.258" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:02.258" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:02.258" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:02.258" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:02.258" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:02.258" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:02.258" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:02.258" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:02.258" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:02.259" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:02.259" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:02.259" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:02.259" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:02.259" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:02.259" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:02.259" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:02.259" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:02.259" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:02.259" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:02.259" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:02.259" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:02.259" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:02.260" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:02.260" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:02.260" starttime="20180812 13:43:02.257"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:02.260" level="INFO">1"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:02.260" starttime="20180812 13:43:02.260"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:02.261" level="INFO">${ButtonName} = Button5</msg>
+<status status="PASS" endtime="20180812 13:43:02.261" starttime="20180812 13:43:02.261"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:02.272" starttime="20180812 13:43:02.262"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:02.273" starttime="20180812 13:43:02.256"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:02.273" starttime="20180812 13:43:02.256"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = =">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:02.275" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:02.275" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:02.275" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:02.275" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:02.275" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:02.275" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:02.275" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:02.275" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:02.275" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:02.275" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:02.275" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:02.276" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:02.276" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:02.276" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:02.276" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:02.276" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:02.276" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:02.276" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:02.276" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:02.276" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:02.276" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:02.276" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:02.276" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:02.276" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:02.277" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:02.277" starttime="20180812 13:43:02.274"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:02.277" level="INFO">="text***"</msg>
+<status status="PASS" endtime="20180812 13:43:02.277" starttime="20180812 13:43:02.277"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:02.278" level="INFO">${ButtonName} = Button28</msg>
+<status status="PASS" endtime="20180812 13:43:02.278" starttime="20180812 13:43:02.278"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:02.289" starttime="20180812 13:43:02.278"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:02.290" starttime="20180812 13:43:02.273"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:02.290" starttime="20180812 13:43:02.273"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:02.290" starttime="20180812 13:43:02.204"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:02.290" starttime="20180812 13:43:02.183"></status>
+</kw>
+<kw name="Win Wait" library="AutoItLibrary">
+<doc>Direct wrapper for AutoIt's WinWait method.</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>42</arg>
+</arguments>
+<msg timestamp="20180812 13:43:02.551" level="INFO">AutoItLibrary.WinWait(WindowTitle='\u8ba1\u7b97\u5668', WindowText='42', TimeOut=10)</msg>
+<status status="PASS" endtime="20180812 13:43:02.551" starttime="20180812 13:43:02.290"></status>
+</kw>
+<kw name="Get Answer">
+<doc>Get the answer via the clipboard, since the control is not accessible in the 6.1 version (it used to be "Edit1" in the 5.1 version).</doc>
+<assign>
+<var>${Ans}</var>
+</assign>
+<kw name="Select Calculator Menu Item">
+<doc>The Windows Calculator application doesn't really use a Windows GUI Menu to implement its menus. Therefore AutoIt can't see the menus as menu GUI objects. The only way to access the Calculator menus is via the ALT key sequences. In Win XP the Calculator menu ALT key letters are underlined, and thus available, all the time. Microsoft, in their wisdom, changed this in Win Vista so that you have to press the ALT key and "wait a bit" before the ALT key letters are underlined on the GUI. When they're not underlined, they don't work. Since AutoIt can send ALT key sequences VERY FAST, a sequence such as !VS (ALT+V+S) doesn't work on Win Vista, while it does work on Win XP. To get around this problem, and to make menu item selection more "tester friendly" we provide this keyword. It takes the name of a menu item as defined in the MENUMAP dictionary in the CalculatorGUIMap.py file. The MENUMAP dictionary items translate the application oriented menu name into the sequence of ALT keys to access that menu item. To make this work on Win XP and Win Vista, this keyword sends the ALT key first, waits a bit, then sends the sequence of keys from the MENUMAP. Complicated, but welcome to the wierd world of Windows GUI testing!</doc>
+<arguments>
+<arg>Edit Copy</arg>
+</arguments>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${MENUMAP}</arg>
+<arg>${MenuItem}</arg>
+</arguments>
+<assign>
+<var>${AltKeys}</var>
+</assign>
+<msg timestamp="20180812 13:43:02.553" level="INFO">${AltKeys} = EC</msg>
+<status status="PASS" endtime="20180812 13:43:02.553" starttime="20180812 13:43:02.552"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${AltKeys} =</arg>
+<arg>Set Variable</arg>
+<arg>VS</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:02.554" starttime="20180812 13:43:02.553"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTDOWN}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:02.580" starttime="20180812 13:43:02.554"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180812 13:43:03.580" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180812 13:43:03.580" starttime="20180812 13:43:02.580"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>${AltKeys}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:03.642" starttime="20180812 13:43:03.580"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTUP}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:03.668" starttime="20180812 13:43:03.643"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:03.669" starttime="20180812 13:43:02.552"></status>
+</kw>
+<kw name="Clip Get" library="AutoItLibrary">
+<doc>method ClipGet</doc>
+<assign>
+<var>${Answer}</var>
+</assign>
+<msg timestamp="20180812 13:43:03.669" level="INFO">${Answer} = 42</msg>
+<status status="PASS" endtime="20180812 13:43:03.669" starttime="20180812 13:43:03.669"></status>
+</kw>
+<msg timestamp="20180812 13:43:03.670" level="INFO">${Ans} = 42</msg>
+<status status="PASS" endtime="20180812 13:43:03.670" starttime="20180812 13:43:02.551"></status>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<arguments>
+<arg>${Ans}</arg>
+<arg>42</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:03.671" starttime="20180812 13:43:03.670"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Screenshot.Take Screenshot</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:03.671" starttime="20180812 13:43:03.671"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Screenshot.Take Screenshot Without Embedding</arg>
+<arg>ts1.jpg</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:03.672" starttime="20180812 13:43:03.671"></status>
+</kw>
+<doc>Get "The Answer" by addition.</doc>
+<status status="PASS" endtime="20180812 13:43:03.672" critical="yes" starttime="20180812 13:43:02.163"></status>
+</test>
+<test id="s1-t2" name="Integer Subtraction">
+<kw type="setup" name="Clear Calculator">
+<doc>Click the Clear button in the Windows Calculator</doc>
+<kw name="Win Activate" library="AutoItLibrary">
+<doc>method WinActivate</doc>
+<arguments>
+<arg>Calculator</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:03.676" starttime="20180812 13:43:03.675"></status>
+</kw>
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>Clear</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:03.678" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:03.678" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:03.678" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:03.678" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:03.679" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:03.679" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:03.679" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:03.679" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:03.679" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:03.679" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:03.679" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:03.679" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:03.680" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:03.680" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:03.680" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:03.680" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:03.680" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:03.680" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:03.680" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:03.681" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:03.681" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:03.681" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:03.681" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:03.681" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:03.681" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:03.681" starttime="20180812 13:43:03.677"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:03.682" level="INFO">Clear"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:03.683" starttime="20180812 13:43:03.682"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:03.684" level="INFO">${ButtonName} = Button13</msg>
+<status status="PASS" endtime="20180812 13:43:03.684" starttime="20180812 13:43:03.683"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:03.696" starttime="20180812 13:43:03.685"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:03.697" starttime="20180812 13:43:03.676"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:03.697" starttime="20180812 13:43:03.674"></status>
+</kw>
+<kw name="Click Buttons">
+<doc>Click a sequence of buttons by their text names, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>4 5 - 3 =</arg>
+</arguments>
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${ButtonNames}</arg>
+</arguments>
+<assign>
+<var>@{Buttons}</var>
+</assign>
+<msg timestamp="20180812 13:43:03.700" level="INFO">@{Buttons} = [ 4 | 5 | - | 3 | = ]</msg>
+<status status="PASS" endtime="20180812 13:43:03.700" starttime="20180812 13:43:03.699"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>@{Buttons}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:03.701" level="INFO">4</msg>
+<msg timestamp="20180812 13:43:03.701" level="INFO">5</msg>
+<msg timestamp="20180812 13:43:03.701" level="INFO">-</msg>
+<msg timestamp="20180812 13:43:03.702" level="INFO">3</msg>
+<msg timestamp="20180812 13:43:03.702" level="INFO">=</msg>
+<status status="PASS" endtime="20180812 13:43:03.702" starttime="20180812 13:43:03.700"></status>
+</kw>
+<kw type="for" name="${ButtonName} IN [ @{Buttons} ]">
+<kw type="foritem" name="${ButtonName} = 4">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:03.705" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:03.705" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:03.705" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:03.705" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:03.705" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:03.705" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:03.705" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:03.705" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:03.705" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:03.706" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:03.706" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:03.706" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:03.706" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:03.706" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:03.706" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:03.706" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:03.706" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:03.706" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:03.706" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:03.706" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:03.706" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:03.706" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:03.707" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:03.707" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:03.707" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:03.707" starttime="20180812 13:43:03.704"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:03.707" level="INFO">4"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:03.708" starttime="20180812 13:43:03.707"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:03.708" level="INFO">${ButtonName} = Button4</msg>
+<status status="PASS" endtime="20180812 13:43:03.708" starttime="20180812 13:43:03.708"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:03.719" starttime="20180812 13:43:03.709"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:03.720" starttime="20180812 13:43:03.703"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:03.720" starttime="20180812 13:43:03.703"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = 5">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:03.722" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:03.722" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:03.722" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:03.722" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:03.722" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:03.722" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:03.722" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:03.722" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:03.722" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:03.722" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:03.722" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:03.722" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:03.722" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:03.723" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:03.723" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:03.723" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:03.723" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:03.723" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:03.723" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:03.723" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:03.723" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:03.723" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:03.723" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:03.723" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:03.723" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:03.723" starttime="20180812 13:43:03.721"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:03.724" level="INFO">5"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:03.724" starttime="20180812 13:43:03.724"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:03.725" level="INFO">${ButtonName} = Button10</msg>
+<status status="PASS" endtime="20180812 13:43:03.725" starttime="20180812 13:43:03.724"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:03.737" starttime="20180812 13:43:03.725"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:03.737" starttime="20180812 13:43:03.720"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:03.737" starttime="20180812 13:43:03.720"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = -">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:03.739" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:03.739" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:03.739" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:03.739" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:03.739" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:03.739" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:03.740" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:03.740" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:03.740" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:03.740" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:03.740" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:03.740" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:03.740" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:03.740" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:03.740" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:03.740" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:03.740" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:03.740" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:03.741" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:03.741" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:03.741" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:03.741" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:03.741" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:03.741" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:03.741" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:03.741" starttime="20180812 13:43:03.738"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:03.742" level="INFO">-"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:03.742" starttime="20180812 13:43:03.741"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:03.743" level="INFO">${ButtonName} = Button22</msg>
+<status status="PASS" endtime="20180812 13:43:03.743" starttime="20180812 13:43:03.742"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:03.754" starttime="20180812 13:43:03.743"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:03.754" starttime="20180812 13:43:03.738"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:03.754" starttime="20180812 13:43:03.738"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = 3">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:03.756" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:03.756" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:03.756" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:03.756" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:03.756" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:03.756" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:03.756" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:03.756" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:03.756" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:03.757" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:03.757" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:03.757" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:03.757" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:03.757" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:03.757" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:03.757" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:03.757" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:03.757" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:03.757" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:03.757" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:03.757" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:03.757" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:03.758" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:03.758" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:03.758" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:03.758" starttime="20180812 13:43:03.755"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:03.758" level="INFO">3"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:03.759" starttime="20180812 13:43:03.758"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:03.759" level="INFO">${ButtonName} = Button16</msg>
+<status status="PASS" endtime="20180812 13:43:03.759" starttime="20180812 13:43:03.759"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:03.770" starttime="20180812 13:43:03.760"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:03.771" starttime="20180812 13:43:03.755"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:03.771" starttime="20180812 13:43:03.754"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = =">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:03.773" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:03.773" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:03.773" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:03.773" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:03.773" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:03.773" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:03.773" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:03.773" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:03.773" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:03.773" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:03.774" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:03.774" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:03.774" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:03.774" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:03.774" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:03.774" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:03.774" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:03.774" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:03.774" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:03.774" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:03.774" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:03.774" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:03.775" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:03.775" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:03.775" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:03.775" starttime="20180812 13:43:03.772"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:03.776" level="INFO">="text***"</msg>
+<status status="PASS" endtime="20180812 13:43:03.776" starttime="20180812 13:43:03.775"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:03.777" level="INFO">${ButtonName} = Button28</msg>
+<status status="PASS" endtime="20180812 13:43:03.777" starttime="20180812 13:43:03.776"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:03.788" starttime="20180812 13:43:03.777"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:03.789" starttime="20180812 13:43:03.771"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:03.789" starttime="20180812 13:43:03.771"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:03.789" starttime="20180812 13:43:03.702"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:03.789" starttime="20180812 13:43:03.698"></status>
+</kw>
+<kw name="Win Wait" library="AutoItLibrary">
+<doc>Direct wrapper for AutoIt's WinWait method.</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>42</arg>
+</arguments>
+<msg timestamp="20180812 13:43:04.050" level="INFO">AutoItLibrary.WinWait(WindowTitle='\u8ba1\u7b97\u5668', WindowText='42', TimeOut=10)</msg>
+<status status="PASS" endtime="20180812 13:43:04.050" starttime="20180812 13:43:03.789"></status>
+</kw>
+<kw name="Get Answer">
+<doc>Get the answer via the clipboard, since the control is not accessible in the 6.1 version (it used to be "Edit1" in the 5.1 version).</doc>
+<assign>
+<var>${Ans}</var>
+</assign>
+<kw name="Select Calculator Menu Item">
+<doc>The Windows Calculator application doesn't really use a Windows GUI Menu to implement its menus. Therefore AutoIt can't see the menus as menu GUI objects. The only way to access the Calculator menus is via the ALT key sequences. In Win XP the Calculator menu ALT key letters are underlined, and thus available, all the time. Microsoft, in their wisdom, changed this in Win Vista so that you have to press the ALT key and "wait a bit" before the ALT key letters are underlined on the GUI. When they're not underlined, they don't work. Since AutoIt can send ALT key sequences VERY FAST, a sequence such as !VS (ALT+V+S) doesn't work on Win Vista, while it does work on Win XP. To get around this problem, and to make menu item selection more "tester friendly" we provide this keyword. It takes the name of a menu item as defined in the MENUMAP dictionary in the CalculatorGUIMap.py file. The MENUMAP dictionary items translate the application oriented menu name into the sequence of ALT keys to access that menu item. To make this work on Win XP and Win Vista, this keyword sends the ALT key first, waits a bit, then sends the sequence of keys from the MENUMAP. Complicated, but welcome to the wierd world of Windows GUI testing!</doc>
+<arguments>
+<arg>Edit Copy</arg>
+</arguments>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${MENUMAP}</arg>
+<arg>${MenuItem}</arg>
+</arguments>
+<assign>
+<var>${AltKeys}</var>
+</assign>
+<msg timestamp="20180812 13:43:04.052" level="INFO">${AltKeys} = EC</msg>
+<status status="PASS" endtime="20180812 13:43:04.052" starttime="20180812 13:43:04.051"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${AltKeys} =</arg>
+<arg>Set Variable</arg>
+<arg>VS</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:04.052" starttime="20180812 13:43:04.052"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTDOWN}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:04.079" starttime="20180812 13:43:04.053"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180812 13:43:05.079" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180812 13:43:05.079" starttime="20180812 13:43:04.079"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>${AltKeys}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:05.141" starttime="20180812 13:43:05.079"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTUP}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:05.167" starttime="20180812 13:43:05.141"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:05.168" starttime="20180812 13:43:04.051"></status>
+</kw>
+<kw name="Clip Get" library="AutoItLibrary">
+<doc>method ClipGet</doc>
+<assign>
+<var>${Answer}</var>
+</assign>
+<msg timestamp="20180812 13:43:05.168" level="INFO">${Answer} = 42</msg>
+<status status="PASS" endtime="20180812 13:43:05.169" starttime="20180812 13:43:05.168"></status>
+</kw>
+<msg timestamp="20180812 13:43:05.169" level="INFO">${Ans} = 42</msg>
+<status status="PASS" endtime="20180812 13:43:05.169" starttime="20180812 13:43:04.050"></status>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<arguments>
+<arg>${Ans}</arg>
+<arg>42</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:05.170" starttime="20180812 13:43:05.169"></status>
+</kw>
+<doc>Get "The Answer" by subtraction.</doc>
+<status status="PASS" endtime="20180812 13:43:05.170" critical="yes" starttime="20180812 13:43:03.674"></status>
+</test>
+<test id="s1-t3" name="Integer Multiplication">
+<kw type="setup" name="Clear Calculator">
+<doc>Click the Clear button in the Windows Calculator</doc>
+<kw name="Win Activate" library="AutoItLibrary">
+<doc>method WinActivate</doc>
+<arguments>
+<arg>Calculator</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:05.174" starttime="20180812 13:43:05.173"></status>
+</kw>
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>Clear</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:05.176" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:05.176" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:05.176" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:05.176" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:05.176" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:05.176" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:05.176" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:05.176" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:05.176" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:05.176" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:05.177" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:05.177" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:05.177" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:05.177" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:05.177" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:05.177" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:05.177" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:05.177" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:05.177" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:05.177" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:05.177" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:05.177" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:05.178" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:05.178" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:05.178" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:05.178" starttime="20180812 13:43:05.175"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:05.178" level="INFO">Clear"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:05.179" starttime="20180812 13:43:05.178"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:05.179" level="INFO">${ButtonName} = Button13</msg>
+<status status="PASS" endtime="20180812 13:43:05.179" starttime="20180812 13:43:05.179"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:05.190" starttime="20180812 13:43:05.180"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:05.191" starttime="20180812 13:43:05.175"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:05.191" starttime="20180812 13:43:05.173"></status>
+</kw>
+<kw name="Click Buttons">
+<doc>Click a sequence of buttons by their text names, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>6 * 7 =</arg>
+</arguments>
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${ButtonNames}</arg>
+</arguments>
+<assign>
+<var>@{Buttons}</var>
+</assign>
+<msg timestamp="20180812 13:43:05.192" level="INFO">@{Buttons} = [ 6 | * | 7 | = ]</msg>
+<status status="PASS" endtime="20180812 13:43:05.192" starttime="20180812 13:43:05.192"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>@{Buttons}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:05.193" level="INFO">6</msg>
+<msg timestamp="20180812 13:43:05.193" level="INFO">*</msg>
+<msg timestamp="20180812 13:43:05.193" level="INFO">7</msg>
+<msg timestamp="20180812 13:43:05.193" level="INFO">=</msg>
+<status status="PASS" endtime="20180812 13:43:05.193" starttime="20180812 13:43:05.193"></status>
+</kw>
+<kw type="for" name="${ButtonName} IN [ @{Buttons} ]">
+<kw type="foritem" name="${ButtonName} = 6">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:05.195" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:05.196" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:05.196" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:05.196" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:05.196" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:05.196" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:05.196" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:05.196" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:05.196" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:05.196" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:05.196" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:05.197" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:05.197" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:05.197" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:05.197" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:05.197" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:05.197" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:05.197" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:05.197" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:05.197" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:05.197" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:05.197" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:05.197" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:05.198" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:05.198" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:05.198" starttime="20180812 13:43:05.195"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:05.198" level="INFO">6"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:05.199" starttime="20180812 13:43:05.198"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:05.199" level="INFO">${ButtonName} = Button15</msg>
+<status status="PASS" endtime="20180812 13:43:05.199" starttime="20180812 13:43:05.199"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:05.211" starttime="20180812 13:43:05.200"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:05.211" starttime="20180812 13:43:05.194"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:05.211" starttime="20180812 13:43:05.194"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = *">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:05.213" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:05.213" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:05.213" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:05.213" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:05.213" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:05.213" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:05.213" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:05.213" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:05.213" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:05.213" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:05.213" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:05.214" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:05.214" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:05.214" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:05.214" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:05.214" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:05.214" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:05.214" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:05.214" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:05.214" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:05.214" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:05.214" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:05.214" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:05.215" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:05.215" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:05.215" starttime="20180812 13:43:05.212"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:05.215" level="INFO">*"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:05.215" starttime="20180812 13:43:05.215"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:05.216" level="INFO">${ButtonName} = Button21</msg>
+<status status="PASS" endtime="20180812 13:43:05.216" starttime="20180812 13:43:05.216"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:05.228" starttime="20180812 13:43:05.217"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:05.228" starttime="20180812 13:43:05.211"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:05.228" starttime="20180812 13:43:05.211"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = 7">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:05.230" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:05.230" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:05.230" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:05.231" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:05.231" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:05.231" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:05.231" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:05.231" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:05.231" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:05.231" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:05.231" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:05.231" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:05.231" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:05.231" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:05.231" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:05.231" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:05.232" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:05.232" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:05.232" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:05.232" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:05.232" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:05.232" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:05.232" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:05.232" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:05.232" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:05.232" starttime="20180812 13:43:05.230"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:05.233" level="INFO">7"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:05.233" starttime="20180812 13:43:05.233"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:05.234" level="INFO">${ButtonName} = Button3</msg>
+<status status="PASS" endtime="20180812 13:43:05.234" starttime="20180812 13:43:05.233"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:05.245" starttime="20180812 13:43:05.234"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:05.245" starttime="20180812 13:43:05.229"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:05.246" starttime="20180812 13:43:05.229"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = =">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:05.247" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:05.247" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:05.247" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:05.248" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:05.248" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:05.248" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:05.248" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:05.248" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:05.248" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:05.248" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:05.248" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:05.248" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:05.248" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:05.248" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:05.248" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:05.249" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:05.249" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:05.249" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:05.249" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:05.249" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:05.249" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:05.249" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:05.249" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:05.249" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:05.249" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:05.249" starttime="20180812 13:43:05.247"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:05.250" level="INFO">="text***"</msg>
+<status status="PASS" endtime="20180812 13:43:05.250" starttime="20180812 13:43:05.250"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:05.251" level="INFO">${ButtonName} = Button28</msg>
+<status status="PASS" endtime="20180812 13:43:05.251" starttime="20180812 13:43:05.250"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:05.262" starttime="20180812 13:43:05.251"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:05.263" starttime="20180812 13:43:05.246"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:05.263" starttime="20180812 13:43:05.246"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:05.263" starttime="20180812 13:43:05.194"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:05.263" starttime="20180812 13:43:05.191"></status>
+</kw>
+<kw name="Win Wait" library="AutoItLibrary">
+<doc>Direct wrapper for AutoIt's WinWait method.</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>42</arg>
+</arguments>
+<msg timestamp="20180812 13:43:05.525" level="INFO">AutoItLibrary.WinWait(WindowTitle='\u8ba1\u7b97\u5668', WindowText='42', TimeOut=10)</msg>
+<status status="PASS" endtime="20180812 13:43:05.525" starttime="20180812 13:43:05.264"></status>
+</kw>
+<kw name="Get Answer">
+<doc>Get the answer via the clipboard, since the control is not accessible in the 6.1 version (it used to be "Edit1" in the 5.1 version).</doc>
+<assign>
+<var>${Ans}</var>
+</assign>
+<kw name="Select Calculator Menu Item">
+<doc>The Windows Calculator application doesn't really use a Windows GUI Menu to implement its menus. Therefore AutoIt can't see the menus as menu GUI objects. The only way to access the Calculator menus is via the ALT key sequences. In Win XP the Calculator menu ALT key letters are underlined, and thus available, all the time. Microsoft, in their wisdom, changed this in Win Vista so that you have to press the ALT key and "wait a bit" before the ALT key letters are underlined on the GUI. When they're not underlined, they don't work. Since AutoIt can send ALT key sequences VERY FAST, a sequence such as !VS (ALT+V+S) doesn't work on Win Vista, while it does work on Win XP. To get around this problem, and to make menu item selection more "tester friendly" we provide this keyword. It takes the name of a menu item as defined in the MENUMAP dictionary in the CalculatorGUIMap.py file. The MENUMAP dictionary items translate the application oriented menu name into the sequence of ALT keys to access that menu item. To make this work on Win XP and Win Vista, this keyword sends the ALT key first, waits a bit, then sends the sequence of keys from the MENUMAP. Complicated, but welcome to the wierd world of Windows GUI testing!</doc>
+<arguments>
+<arg>Edit Copy</arg>
+</arguments>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${MENUMAP}</arg>
+<arg>${MenuItem}</arg>
+</arguments>
+<assign>
+<var>${AltKeys}</var>
+</assign>
+<msg timestamp="20180812 13:43:05.528" level="INFO">${AltKeys} = EC</msg>
+<status status="PASS" endtime="20180812 13:43:05.528" starttime="20180812 13:43:05.527"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${AltKeys} =</arg>
+<arg>Set Variable</arg>
+<arg>VS</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:05.528" starttime="20180812 13:43:05.528"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTDOWN}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:05.555" starttime="20180812 13:43:05.529"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180812 13:43:06.556" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180812 13:43:06.556" starttime="20180812 13:43:05.556"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>${AltKeys}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:06.618" starttime="20180812 13:43:06.556"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTUP}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:06.645" starttime="20180812 13:43:06.619"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:06.645" starttime="20180812 13:43:05.526"></status>
+</kw>
+<kw name="Clip Get" library="AutoItLibrary">
+<doc>method ClipGet</doc>
+<assign>
+<var>${Answer}</var>
+</assign>
+<msg timestamp="20180812 13:43:06.646" level="INFO">${Answer} = 42</msg>
+<status status="PASS" endtime="20180812 13:43:06.646" starttime="20180812 13:43:06.645"></status>
+</kw>
+<msg timestamp="20180812 13:43:06.646" level="INFO">${Ans} = 42</msg>
+<status status="PASS" endtime="20180812 13:43:06.646" starttime="20180812 13:43:05.525"></status>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<arguments>
+<arg>${Ans}</arg>
+<arg>42</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:06.647" starttime="20180812 13:43:06.646"></status>
+</kw>
+<doc>Get "The Answer" by multiplication.</doc>
+<status status="PASS" endtime="20180812 13:43:06.647" critical="yes" starttime="20180812 13:43:05.172"></status>
+</test>
+<test id="s1-t4" name="Integer Division">
+<kw type="setup" name="Clear Calculator">
+<doc>Click the Clear button in the Windows Calculator</doc>
+<kw name="Win Activate" library="AutoItLibrary">
+<doc>method WinActivate</doc>
+<arguments>
+<arg>Calculator</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:06.651" starttime="20180812 13:43:06.650"></status>
+</kw>
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>Clear</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:06.652" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:06.653" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:06.653" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:06.653" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:06.653" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:06.653" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:06.653" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:06.653" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:06.653" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:06.653" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:06.653" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:06.653" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:06.653" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:06.654" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:06.654" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:06.654" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:06.654" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:06.654" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:06.654" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:06.654" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:06.654" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:06.654" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:06.654" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:06.654" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:06.655" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:06.655" starttime="20180812 13:43:06.652"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:06.655" level="INFO">Clear"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:06.655" starttime="20180812 13:43:06.655"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:06.656" level="INFO">${ButtonName} = Button13</msg>
+<status status="PASS" endtime="20180812 13:43:06.656" starttime="20180812 13:43:06.656"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:06.667" starttime="20180812 13:43:06.656"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:06.668" starttime="20180812 13:43:06.651"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:06.668" starttime="20180812 13:43:06.650"></status>
+</kw>
+<kw name="Click Buttons">
+<doc>Click a sequence of buttons by their text names, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>5 4 6 / 1 3 =</arg>
+</arguments>
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${ButtonNames}</arg>
+</arguments>
+<assign>
+<var>@{Buttons}</var>
+</assign>
+<msg timestamp="20180812 13:43:06.669" level="INFO">@{Buttons} = [ 5 | 4 | 6 | / | 1 | 3 | = ]</msg>
+<status status="PASS" endtime="20180812 13:43:06.669" starttime="20180812 13:43:06.669"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>@{Buttons}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:06.670" level="INFO">5</msg>
+<msg timestamp="20180812 13:43:06.670" level="INFO">4</msg>
+<msg timestamp="20180812 13:43:06.670" level="INFO">6</msg>
+<msg timestamp="20180812 13:43:06.670" level="INFO">/</msg>
+<msg timestamp="20180812 13:43:06.670" level="INFO">1</msg>
+<msg timestamp="20180812 13:43:06.670" level="INFO">3</msg>
+<msg timestamp="20180812 13:43:06.670" level="INFO">=</msg>
+<status status="PASS" endtime="20180812 13:43:06.670" starttime="20180812 13:43:06.670"></status>
+</kw>
+<kw type="for" name="${ButtonName} IN [ @{Buttons} ]">
+<kw type="foritem" name="${ButtonName} = 5">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:06.672" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:06.672" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:06.672" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:06.673" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:06.673" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:06.673" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:06.673" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:06.673" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:06.673" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:06.673" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:06.673" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:06.673" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:06.673" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:06.673" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:06.673" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:06.673" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:06.674" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:06.674" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:06.674" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:06.674" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:06.674" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:06.674" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:06.674" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:06.674" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:06.674" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:06.674" starttime="20180812 13:43:06.672"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:06.675" level="INFO">5"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:06.675" starttime="20180812 13:43:06.675"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:06.676" level="INFO">${ButtonName} = Button10</msg>
+<status status="PASS" endtime="20180812 13:43:06.676" starttime="20180812 13:43:06.675"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:06.687" starttime="20180812 13:43:06.676"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:06.687" starttime="20180812 13:43:06.671"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:06.688" starttime="20180812 13:43:06.671"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = 4">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:06.690" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:06.690" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:06.690" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:06.690" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:06.690" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:06.690" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:06.690" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:06.691" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:06.691" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:06.691" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:06.691" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:06.691" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:06.691" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:06.691" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:06.691" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:06.691" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:06.691" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:06.692" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:06.692" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:06.692" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:06.692" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:06.692" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:06.692" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:06.692" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:06.692" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:06.692" starttime="20180812 13:43:06.689"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:06.693" level="INFO">4"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:06.693" starttime="20180812 13:43:06.693"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:06.694" level="INFO">${ButtonName} = Button4</msg>
+<status status="PASS" endtime="20180812 13:43:06.694" starttime="20180812 13:43:06.694"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:06.705" starttime="20180812 13:43:06.695"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:06.706" starttime="20180812 13:43:06.688"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:06.706" starttime="20180812 13:43:06.688"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = 6">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:06.708" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:06.708" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:06.708" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:06.708" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:06.708" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:06.708" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:06.708" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:06.708" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:06.708" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:06.708" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:06.708" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:06.708" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:06.709" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:06.709" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:06.709" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:06.709" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:06.709" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:06.709" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:06.709" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:06.709" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:06.709" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:06.709" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:06.709" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:06.709" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:06.710" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:06.710" starttime="20180812 13:43:06.707"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:06.711" level="INFO">6"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:06.711" starttime="20180812 13:43:06.710"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:06.712" level="INFO">${ButtonName} = Button15</msg>
+<status status="PASS" endtime="20180812 13:43:06.712" starttime="20180812 13:43:06.711"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:06.723" starttime="20180812 13:43:06.712"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:06.724" starttime="20180812 13:43:06.706"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:06.724" starttime="20180812 13:43:06.706"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = /">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:06.726" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:06.726" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:06.726" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:06.726" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:06.726" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:06.726" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:06.726" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:06.726" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:06.727" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:06.727" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:06.727" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:06.727" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:06.727" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:06.727" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:06.727" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:06.727" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:06.727" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:06.727" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:06.727" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:06.728" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:06.728" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:06.728" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:06.728" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:06.728" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:06.728" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:06.728" starttime="20180812 13:43:06.725"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:06.729" level="INFO">/"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:06.729" starttime="20180812 13:43:06.728"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:06.731" level="INFO">${ButtonName} = Button20</msg>
+<status status="PASS" endtime="20180812 13:43:06.731" starttime="20180812 13:43:06.729"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:06.743" starttime="20180812 13:43:06.732"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:06.743" starttime="20180812 13:43:06.724"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:06.744" starttime="20180812 13:43:06.724"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = 1">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:06.746" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:06.746" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:06.746" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:06.746" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:06.746" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:06.746" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:06.746" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:06.746" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:06.746" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:06.746" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:06.746" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:06.746" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:06.747" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:06.747" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:06.747" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:06.747" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:06.747" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:06.747" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:06.747" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:06.747" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:06.747" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:06.747" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:06.747" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:06.747" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:06.747" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:06.748" starttime="20180812 13:43:06.745"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:06.748" level="INFO">1"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:06.748" starttime="20180812 13:43:06.748"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:06.749" level="INFO">${ButtonName} = Button5</msg>
+<status status="PASS" endtime="20180812 13:43:06.749" starttime="20180812 13:43:06.749"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:06.760" starttime="20180812 13:43:06.749"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:06.761" starttime="20180812 13:43:06.744"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:06.761" starttime="20180812 13:43:06.744"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = 3">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:06.763" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:06.763" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:06.763" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:06.763" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:06.763" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:06.763" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:06.763" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:06.764" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:06.764" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:06.764" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:06.764" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:06.764" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:06.764" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:06.764" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:06.764" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:06.764" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:06.764" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:06.764" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:06.765" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:06.765" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:06.765" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:06.765" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:06.765" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:06.765" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:06.765" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:06.765" starttime="20180812 13:43:06.762"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:06.766" level="INFO">3"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:06.766" starttime="20180812 13:43:06.765"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:06.767" level="INFO">${ButtonName} = Button16</msg>
+<status status="PASS" endtime="20180812 13:43:06.767" starttime="20180812 13:43:06.766"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:06.778" starttime="20180812 13:43:06.767"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:06.778" starttime="20180812 13:43:06.761"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:06.778" starttime="20180812 13:43:06.761"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = =">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:06.780" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:06.780" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:06.780" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:06.780" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:06.780" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:06.781" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:06.781" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:06.781" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:06.781" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:06.781" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:06.781" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:06.781" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:06.781" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:06.781" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:06.781" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:06.781" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:06.781" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:06.782" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:06.782" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:06.782" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:06.782" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:06.782" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:06.782" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:06.782" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:06.782" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:06.782" starttime="20180812 13:43:06.779"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:06.783" level="INFO">="text***"</msg>
+<status status="PASS" endtime="20180812 13:43:06.783" starttime="20180812 13:43:06.783"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:06.784" level="INFO">${ButtonName} = Button28</msg>
+<status status="PASS" endtime="20180812 13:43:06.784" starttime="20180812 13:43:06.784"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:06.795" starttime="20180812 13:43:06.784"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:06.796" starttime="20180812 13:43:06.779"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:06.796" starttime="20180812 13:43:06.779"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:06.796" starttime="20180812 13:43:06.671"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:06.796" starttime="20180812 13:43:06.668"></status>
+</kw>
+<kw name="Win Wait" library="AutoItLibrary">
+<doc>Direct wrapper for AutoIt's WinWait method.</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>42</arg>
+</arguments>
+<msg timestamp="20180812 13:43:07.057" level="INFO">AutoItLibrary.WinWait(WindowTitle='\u8ba1\u7b97\u5668', WindowText='42', TimeOut=10)</msg>
+<status status="PASS" endtime="20180812 13:43:07.057" starttime="20180812 13:43:06.797"></status>
+</kw>
+<kw name="Get Answer">
+<doc>Get the answer via the clipboard, since the control is not accessible in the 6.1 version (it used to be "Edit1" in the 5.1 version).</doc>
+<assign>
+<var>${Ans}</var>
+</assign>
+<kw name="Select Calculator Menu Item">
+<doc>The Windows Calculator application doesn't really use a Windows GUI Menu to implement its menus. Therefore AutoIt can't see the menus as menu GUI objects. The only way to access the Calculator menus is via the ALT key sequences. In Win XP the Calculator menu ALT key letters are underlined, and thus available, all the time. Microsoft, in their wisdom, changed this in Win Vista so that you have to press the ALT key and "wait a bit" before the ALT key letters are underlined on the GUI. When they're not underlined, they don't work. Since AutoIt can send ALT key sequences VERY FAST, a sequence such as !VS (ALT+V+S) doesn't work on Win Vista, while it does work on Win XP. To get around this problem, and to make menu item selection more "tester friendly" we provide this keyword. It takes the name of a menu item as defined in the MENUMAP dictionary in the CalculatorGUIMap.py file. The MENUMAP dictionary items translate the application oriented menu name into the sequence of ALT keys to access that menu item. To make this work on Win XP and Win Vista, this keyword sends the ALT key first, waits a bit, then sends the sequence of keys from the MENUMAP. Complicated, but welcome to the wierd world of Windows GUI testing!</doc>
+<arguments>
+<arg>Edit Copy</arg>
+</arguments>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${MENUMAP}</arg>
+<arg>${MenuItem}</arg>
+</arguments>
+<assign>
+<var>${AltKeys}</var>
+</assign>
+<msg timestamp="20180812 13:43:07.059" level="INFO">${AltKeys} = EC</msg>
+<status status="PASS" endtime="20180812 13:43:07.059" starttime="20180812 13:43:07.058"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${AltKeys} =</arg>
+<arg>Set Variable</arg>
+<arg>VS</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:07.059" starttime="20180812 13:43:07.059"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTDOWN}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:07.086" starttime="20180812 13:43:07.060"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180812 13:43:08.086" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180812 13:43:08.086" starttime="20180812 13:43:07.086"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>${AltKeys}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:08.148" starttime="20180812 13:43:08.086"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTUP}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:08.174" starttime="20180812 13:43:08.148"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:08.175" starttime="20180812 13:43:07.058"></status>
+</kw>
+<kw name="Clip Get" library="AutoItLibrary">
+<doc>method ClipGet</doc>
+<assign>
+<var>${Answer}</var>
+</assign>
+<msg timestamp="20180812 13:43:08.175" level="INFO">${Answer} = 42</msg>
+<status status="PASS" endtime="20180812 13:43:08.175" starttime="20180812 13:43:08.175"></status>
+</kw>
+<msg timestamp="20180812 13:43:08.176" level="INFO">${Ans} = 42</msg>
+<status status="PASS" endtime="20180812 13:43:08.176" starttime="20180812 13:43:07.057"></status>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<arguments>
+<arg>${Ans}</arg>
+<arg>42</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:08.177" starttime="20180812 13:43:08.176"></status>
+</kw>
+<doc>Get "The Answer" by division.</doc>
+<status status="PASS" endtime="20180812 13:43:08.177" critical="yes" starttime="20180812 13:43:06.649"></status>
+</test>
+<test id="s1-t5" name="Hex Addition">
+<kw type="setup" name="Set Hex Mode">
+<doc>Put the calculator in Hex arithmetic Dword mode.</doc>
+<kw name="Select Calculator Menu Item">
+<doc>The Windows Calculator application doesn't really use a Windows GUI Menu to implement its menus. Therefore AutoIt can't see the menus as menu GUI objects. The only way to access the Calculator menus is via the ALT key sequences. In Win XP the Calculator menu ALT key letters are underlined, and thus available, all the time. Microsoft, in their wisdom, changed this in Win Vista so that you have to press the ALT key and "wait a bit" before the ALT key letters are underlined on the GUI. When they're not underlined, they don't work. Since AutoIt can send ALT key sequences VERY FAST, a sequence such as !VS (ALT+V+S) doesn't work on Win Vista, while it does work on Win XP. To get around this problem, and to make menu item selection more "tester friendly" we provide this keyword. It takes the name of a menu item as defined in the MENUMAP dictionary in the CalculatorGUIMap.py file. The MENUMAP dictionary items translate the application oriented menu name into the sequence of ALT keys to access that menu item. To make this work on Win XP and Win Vista, this keyword sends the ALT key first, waits a bit, then sends the sequence of keys from the MENUMAP. Complicated, but welcome to the wierd world of Windows GUI testing!</doc>
+<arguments>
+<arg>View Hex</arg>
+</arguments>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${MENUMAP}</arg>
+<arg>${MenuItem}</arg>
+</arguments>
+<assign>
+<var>${AltKeys}</var>
+</assign>
+<msg timestamp="20180812 13:43:08.181" level="INFO">${AltKeys} = VP</msg>
+<status status="PASS" endtime="20180812 13:43:08.181" starttime="20180812 13:43:08.180"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${AltKeys} =</arg>
+<arg>Set Variable</arg>
+<arg>VS</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:08.182" starttime="20180812 13:43:08.181"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTDOWN}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:08.208" starttime="20180812 13:43:08.182"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180812 13:43:09.209" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180812 13:43:09.209" starttime="20180812 13:43:08.208"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>${AltKeys}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:09.273" starttime="20180812 13:43:09.209"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTUP}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:09.299" starttime="20180812 13:43:09.273"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:09.300" starttime="20180812 13:43:08.180"></status>
+</kw>
+<kw name="Click Buttons">
+<doc>Click a sequence of buttons by their text names, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>Hex Dword</arg>
+</arguments>
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${ButtonNames}</arg>
+</arguments>
+<assign>
+<var>@{Buttons}</var>
+</assign>
+<msg timestamp="20180812 13:43:09.301" level="INFO">@{Buttons} = [ Hex | Dword ]</msg>
+<status status="PASS" endtime="20180812 13:43:09.301" starttime="20180812 13:43:09.301"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>@{Buttons}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:09.302" level="INFO">Hex</msg>
+<msg timestamp="20180812 13:43:09.302" level="INFO">Dword</msg>
+<status status="PASS" endtime="20180812 13:43:09.302" starttime="20180812 13:43:09.302"></status>
+</kw>
+<kw type="for" name="${ButtonName} IN [ @{Buttons} ]">
+<kw type="foritem" name="${ButtonName} = Hex">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:09.304" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:09.304" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:09.304" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:09.304" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:09.304" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:09.304" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:09.305" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:09.305" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:09.305" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:09.305" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:09.305" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:09.305" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:09.305" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:09.305" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:09.305" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:09.305" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:09.305" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:09.305" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:09.306" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:09.306" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:09.306" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:09.306" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:09.306" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:09.306" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:09.306" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:09.306" starttime="20180812 13:43:09.303"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:09.307" level="INFO">Hex"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:09.307" starttime="20180812 13:43:09.307"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:09.308" level="INFO">${ButtonName} = Button1</msg>
+<status status="PASS" endtime="20180812 13:43:09.308" starttime="20180812 13:43:09.308"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:09.319" starttime="20180812 13:43:09.308"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:09.320" starttime="20180812 13:43:09.303"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:09.320" starttime="20180812 13:43:09.303"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = Dword">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:09.321" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:09.322" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:09.322" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:09.322" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:09.322" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:09.322" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:09.322" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:09.322" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:09.322" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:09.322" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:09.322" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:09.322" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:09.322" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:09.322" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:09.323" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:09.323" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:09.323" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:09.323" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:09.323" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:09.323" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:09.323" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:09.323" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:09.323" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:09.323" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:09.323" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:09.323" starttime="20180812 13:43:09.321"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:09.324" level="INFO">Dword"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:09.324" starttime="20180812 13:43:09.324"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:09.325" level="INFO">${ButtonName} = Button6</msg>
+<status status="PASS" endtime="20180812 13:43:09.325" starttime="20180812 13:43:09.324"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:09.336" starttime="20180812 13:43:09.325"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:09.336" starttime="20180812 13:43:09.320"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:09.336" starttime="20180812 13:43:09.320"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:09.337" starttime="20180812 13:43:09.302"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:09.337" starttime="20180812 13:43:09.300"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1 sec</arg>
+</arguments>
+<msg timestamp="20180812 13:43:10.337" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180812 13:43:10.337" starttime="20180812 13:43:09.337"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:10.337" starttime="20180812 13:43:08.180"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>DE01F100</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:10.471" starttime="20180812 13:43:10.338"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{+}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:10.512" starttime="20180812 13:43:10.471"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>ABCDEF</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:10.656" starttime="20180812 13:43:10.513"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>=</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:10.688" starttime="20180812 13:43:10.656"></status>
+</kw>
+<kw name="Win Wait" library="AutoItLibrary">
+<doc>Direct wrapper for AutoIt's WinWait method.</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>DEADBEEF</arg>
+</arguments>
+<msg timestamp="20180812 13:43:10.948" level="INFO">AutoItLibrary.WinWait(WindowTitle='\u8ba1\u7b97\u5668', WindowText='DEADBEEF', TimeOut=10)</msg>
+<status status="PASS" endtime="20180812 13:43:10.948" starttime="20180812 13:43:10.688"></status>
+</kw>
+<kw name="Get Answer">
+<doc>Get the answer via the clipboard, since the control is not accessible in the 6.1 version (it used to be "Edit1" in the 5.1 version).</doc>
+<assign>
+<var>${Ans}</var>
+</assign>
+<kw name="Select Calculator Menu Item">
+<doc>The Windows Calculator application doesn't really use a Windows GUI Menu to implement its menus. Therefore AutoIt can't see the menus as menu GUI objects. The only way to access the Calculator menus is via the ALT key sequences. In Win XP the Calculator menu ALT key letters are underlined, and thus available, all the time. Microsoft, in their wisdom, changed this in Win Vista so that you have to press the ALT key and "wait a bit" before the ALT key letters are underlined on the GUI. When they're not underlined, they don't work. Since AutoIt can send ALT key sequences VERY FAST, a sequence such as !VS (ALT+V+S) doesn't work on Win Vista, while it does work on Win XP. To get around this problem, and to make menu item selection more "tester friendly" we provide this keyword. It takes the name of a menu item as defined in the MENUMAP dictionary in the CalculatorGUIMap.py file. The MENUMAP dictionary items translate the application oriented menu name into the sequence of ALT keys to access that menu item. To make this work on Win XP and Win Vista, this keyword sends the ALT key first, waits a bit, then sends the sequence of keys from the MENUMAP. Complicated, but welcome to the wierd world of Windows GUI testing!</doc>
+<arguments>
+<arg>Edit Copy</arg>
+</arguments>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${MENUMAP}</arg>
+<arg>${MenuItem}</arg>
+</arguments>
+<assign>
+<var>${AltKeys}</var>
+</assign>
+<msg timestamp="20180812 13:43:10.950" level="INFO">${AltKeys} = EC</msg>
+<status status="PASS" endtime="20180812 13:43:10.950" starttime="20180812 13:43:10.949"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${AltKeys} =</arg>
+<arg>Set Variable</arg>
+<arg>VS</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:10.951" starttime="20180812 13:43:10.950"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTDOWN}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:10.977" starttime="20180812 13:43:10.951"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180812 13:43:11.978" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180812 13:43:11.978" starttime="20180812 13:43:10.977"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>${AltKeys}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:12.040" starttime="20180812 13:43:11.978"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTUP}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:12.066" starttime="20180812 13:43:12.041"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:12.067" starttime="20180812 13:43:10.949"></status>
+</kw>
+<kw name="Clip Get" library="AutoItLibrary">
+<doc>method ClipGet</doc>
+<assign>
+<var>${Answer}</var>
+</assign>
+<msg timestamp="20180812 13:43:12.068" level="INFO">${Answer} = DEADBEEF</msg>
+<status status="PASS" endtime="20180812 13:43:12.068" starttime="20180812 13:43:12.067"></status>
+</kw>
+<msg timestamp="20180812 13:43:12.068" level="INFO">${Ans} = DEADBEEF</msg>
+<status status="PASS" endtime="20180812 13:43:12.068" starttime="20180812 13:43:10.948"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${Ans}</arg>
+<arg>DEADBEEF</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:12.069" starttime="20180812 13:43:12.069"></status>
+</kw>
+<doc>Test Hex addition.</doc>
+<status status="PASS" endtime="20180812 13:43:12.069" critical="yes" starttime="20180812 13:43:08.179"></status>
+</test>
+<test id="s1-t6" name="Hex Subtraction">
+<kw type="setup" name="Set Hex Mode">
+<doc>Put the calculator in Hex arithmetic Dword mode.</doc>
+<kw name="Select Calculator Menu Item">
+<doc>The Windows Calculator application doesn't really use a Windows GUI Menu to implement its menus. Therefore AutoIt can't see the menus as menu GUI objects. The only way to access the Calculator menus is via the ALT key sequences. In Win XP the Calculator menu ALT key letters are underlined, and thus available, all the time. Microsoft, in their wisdom, changed this in Win Vista so that you have to press the ALT key and "wait a bit" before the ALT key letters are underlined on the GUI. When they're not underlined, they don't work. Since AutoIt can send ALT key sequences VERY FAST, a sequence such as !VS (ALT+V+S) doesn't work on Win Vista, while it does work on Win XP. To get around this problem, and to make menu item selection more "tester friendly" we provide this keyword. It takes the name of a menu item as defined in the MENUMAP dictionary in the CalculatorGUIMap.py file. The MENUMAP dictionary items translate the application oriented menu name into the sequence of ALT keys to access that menu item. To make this work on Win XP and Win Vista, this keyword sends the ALT key first, waits a bit, then sends the sequence of keys from the MENUMAP. Complicated, but welcome to the wierd world of Windows GUI testing!</doc>
+<arguments>
+<arg>View Hex</arg>
+</arguments>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${MENUMAP}</arg>
+<arg>${MenuItem}</arg>
+</arguments>
+<assign>
+<var>${AltKeys}</var>
+</assign>
+<msg timestamp="20180812 13:43:12.073" level="INFO">${AltKeys} = VP</msg>
+<status status="PASS" endtime="20180812 13:43:12.073" starttime="20180812 13:43:12.073"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${AltKeys} =</arg>
+<arg>Set Variable</arg>
+<arg>VS</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:12.074" starttime="20180812 13:43:12.074"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTDOWN}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:12.100" starttime="20180812 13:43:12.074"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180812 13:43:13.101" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180812 13:43:13.101" starttime="20180812 13:43:12.101"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>${AltKeys}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:13.163" starttime="20180812 13:43:13.101"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTUP}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:13.189" starttime="20180812 13:43:13.163"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:13.190" starttime="20180812 13:43:12.072"></status>
+</kw>
+<kw name="Click Buttons">
+<doc>Click a sequence of buttons by their text names, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>Hex Dword</arg>
+</arguments>
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${ButtonNames}</arg>
+</arguments>
+<assign>
+<var>@{Buttons}</var>
+</assign>
+<msg timestamp="20180812 13:43:13.191" level="INFO">@{Buttons} = [ Hex | Dword ]</msg>
+<status status="PASS" endtime="20180812 13:43:13.191" starttime="20180812 13:43:13.191"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>@{Buttons}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:13.192" level="INFO">Hex</msg>
+<msg timestamp="20180812 13:43:13.192" level="INFO">Dword</msg>
+<status status="PASS" endtime="20180812 13:43:13.192" starttime="20180812 13:43:13.191"></status>
+</kw>
+<kw type="for" name="${ButtonName} IN [ @{Buttons} ]">
+<kw type="foritem" name="${ButtonName} = Hex">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:13.194" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:13.194" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:13.194" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:13.194" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:13.194" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:13.194" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:13.194" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:13.194" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:13.194" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:13.195" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:13.195" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:13.195" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:13.195" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:13.195" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:13.195" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:13.195" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:13.195" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:13.195" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:13.195" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:13.195" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:13.195" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:13.195" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:13.196" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:13.196" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:13.196" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:13.196" starttime="20180812 13:43:13.193"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:13.196" level="INFO">Hex"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:13.197" starttime="20180812 13:43:13.196"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:13.197" level="INFO">${ButtonName} = Button1</msg>
+<status status="PASS" endtime="20180812 13:43:13.197" starttime="20180812 13:43:13.197"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:13.209" starttime="20180812 13:43:13.198"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:13.209" starttime="20180812 13:43:13.192"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:13.209" starttime="20180812 13:43:13.192"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = Dword">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:13.211" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:13.211" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:13.211" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:13.211" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:13.211" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:13.211" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:13.211" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:13.211" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:13.211" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:13.212" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:13.212" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:13.212" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:13.212" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:13.212" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:13.212" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:13.212" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:13.212" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:13.212" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:13.212" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:13.212" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:13.212" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:13.212" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:13.213" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:13.213" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:13.213" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:13.213" starttime="20180812 13:43:13.210"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:13.214" level="INFO">Dword"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:13.214" starttime="20180812 13:43:13.213"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:13.214" level="INFO">${ButtonName} = Button6</msg>
+<status status="PASS" endtime="20180812 13:43:13.215" starttime="20180812 13:43:13.214"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:13.226" starttime="20180812 13:43:13.215"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:13.226" starttime="20180812 13:43:13.210"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:13.226" starttime="20180812 13:43:13.209"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:13.227" starttime="20180812 13:43:13.192"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:13.227" starttime="20180812 13:43:13.190"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1 sec</arg>
+</arguments>
+<msg timestamp="20180812 13:43:14.227" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180812 13:43:14.227" starttime="20180812 13:43:13.227"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:14.227" starttime="20180812 13:43:12.072"></status>
+</kw>
+<kw name="Clip Put" library="AutoItLibrary">
+<doc>method ClipPut</doc>
+<arguments>
+<arg>DF598CDE</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:14.228" starttime="20180812 13:43:14.228"></status>
+</kw>
+<kw name="Select Calculator Menu Item">
+<doc>The Windows Calculator application doesn't really use a Windows GUI Menu to implement its menus. Therefore AutoIt can't see the menus as menu GUI objects. The only way to access the Calculator menus is via the ALT key sequences. In Win XP the Calculator menu ALT key letters are underlined, and thus available, all the time. Microsoft, in their wisdom, changed this in Win Vista so that you have to press the ALT key and "wait a bit" before the ALT key letters are underlined on the GUI. When they're not underlined, they don't work. Since AutoIt can send ALT key sequences VERY FAST, a sequence such as !VS (ALT+V+S) doesn't work on Win Vista, while it does work on Win XP. To get around this problem, and to make menu item selection more "tester friendly" we provide this keyword. It takes the name of a menu item as defined in the MENUMAP dictionary in the CalculatorGUIMap.py file. The MENUMAP dictionary items translate the application oriented menu name into the sequence of ALT keys to access that menu item. To make this work on Win XP and Win Vista, this keyword sends the ALT key first, waits a bit, then sends the sequence of keys from the MENUMAP. Complicated, but welcome to the wierd world of Windows GUI testing!</doc>
+<arguments>
+<arg>Edit Paste</arg>
+</arguments>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${MENUMAP}</arg>
+<arg>${MenuItem}</arg>
+</arguments>
+<assign>
+<var>${AltKeys}</var>
+</assign>
+<msg timestamp="20180812 13:43:14.230" level="INFO">${AltKeys} = EP</msg>
+<status status="PASS" endtime="20180812 13:43:14.230" starttime="20180812 13:43:14.229"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${AltKeys} =</arg>
+<arg>Set Variable</arg>
+<arg>VS</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:14.230" starttime="20180812 13:43:14.230"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTDOWN}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:14.256" starttime="20180812 13:43:14.230"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180812 13:43:15.257" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180812 13:43:15.257" starttime="20180812 13:43:14.257"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>${AltKeys}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:15.321" starttime="20180812 13:43:15.257"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTUP}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:15.347" starttime="20180812 13:43:15.321"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:15.348" starttime="20180812 13:43:14.228"></status>
+</kw>
+<kw name="Win Wait" library="AutoItLibrary">
+<doc>Direct wrapper for AutoIt's WinWait method.</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>DF598CDE</arg>
+</arguments>
+<msg timestamp="20180812 13:43:15.610" level="INFO">AutoItLibrary.WinWait(WindowTitle='\u8ba1\u7b97\u5668', WindowText='DF598CDE', TimeOut=10)</msg>
+<status status="PASS" endtime="20180812 13:43:15.610" starttime="20180812 13:43:15.348"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>-</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:15.641" starttime="20180812 13:43:15.610"></status>
+</kw>
+<kw name="Clip Put" library="AutoItLibrary">
+<doc>method ClipPut</doc>
+<arguments>
+<arg>ABCDEF</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:15.642" starttime="20180812 13:43:15.642"></status>
+</kw>
+<kw name="Select Calculator Menu Item">
+<doc>The Windows Calculator application doesn't really use a Windows GUI Menu to implement its menus. Therefore AutoIt can't see the menus as menu GUI objects. The only way to access the Calculator menus is via the ALT key sequences. In Win XP the Calculator menu ALT key letters are underlined, and thus available, all the time. Microsoft, in their wisdom, changed this in Win Vista so that you have to press the ALT key and "wait a bit" before the ALT key letters are underlined on the GUI. When they're not underlined, they don't work. Since AutoIt can send ALT key sequences VERY FAST, a sequence such as !VS (ALT+V+S) doesn't work on Win Vista, while it does work on Win XP. To get around this problem, and to make menu item selection more "tester friendly" we provide this keyword. It takes the name of a menu item as defined in the MENUMAP dictionary in the CalculatorGUIMap.py file. The MENUMAP dictionary items translate the application oriented menu name into the sequence of ALT keys to access that menu item. To make this work on Win XP and Win Vista, this keyword sends the ALT key first, waits a bit, then sends the sequence of keys from the MENUMAP. Complicated, but welcome to the wierd world of Windows GUI testing!</doc>
+<arguments>
+<arg>Edit Paste</arg>
+</arguments>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${MENUMAP}</arg>
+<arg>${MenuItem}</arg>
+</arguments>
+<assign>
+<var>${AltKeys}</var>
+</assign>
+<msg timestamp="20180812 13:43:15.643" level="INFO">${AltKeys} = EP</msg>
+<status status="PASS" endtime="20180812 13:43:15.644" starttime="20180812 13:43:15.643"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${AltKeys} =</arg>
+<arg>Set Variable</arg>
+<arg>VS</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:15.644" starttime="20180812 13:43:15.644"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTDOWN}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:15.670" starttime="20180812 13:43:15.644"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180812 13:43:16.671" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180812 13:43:16.671" starttime="20180812 13:43:15.671"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>${AltKeys}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:16.734" starttime="20180812 13:43:16.671"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTUP}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:16.760" starttime="20180812 13:43:16.734"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:16.761" starttime="20180812 13:43:15.642"></status>
+</kw>
+<kw name="Win Wait" library="AutoItLibrary">
+<doc>Direct wrapper for AutoIt's WinWait method.</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>ABCDEF</arg>
+</arguments>
+<msg timestamp="20180812 13:43:17.021" level="INFO">AutoItLibrary.WinWait(WindowTitle='\u8ba1\u7b97\u5668', WindowText='ABCDEF', TimeOut=10)</msg>
+<status status="PASS" endtime="20180812 13:43:17.021" starttime="20180812 13:43:16.761"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>=</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:17.053" starttime="20180812 13:43:17.021"></status>
+</kw>
+<kw name="Win Wait" library="AutoItLibrary">
+<doc>Direct wrapper for AutoIt's WinWait method.</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>DEADBEEF</arg>
+</arguments>
+<msg timestamp="20180812 13:43:17.314" level="INFO">AutoItLibrary.WinWait(WindowTitle='\u8ba1\u7b97\u5668', WindowText='DEADBEEF', TimeOut=10)</msg>
+<status status="PASS" endtime="20180812 13:43:17.314" starttime="20180812 13:43:17.053"></status>
+</kw>
+<kw name="Get Answer">
+<doc>Get the answer via the clipboard, since the control is not accessible in the 6.1 version (it used to be "Edit1" in the 5.1 version).</doc>
+<assign>
+<var>${Ans}</var>
+</assign>
+<kw name="Select Calculator Menu Item">
+<doc>The Windows Calculator application doesn't really use a Windows GUI Menu to implement its menus. Therefore AutoIt can't see the menus as menu GUI objects. The only way to access the Calculator menus is via the ALT key sequences. In Win XP the Calculator menu ALT key letters are underlined, and thus available, all the time. Microsoft, in their wisdom, changed this in Win Vista so that you have to press the ALT key and "wait a bit" before the ALT key letters are underlined on the GUI. When they're not underlined, they don't work. Since AutoIt can send ALT key sequences VERY FAST, a sequence such as !VS (ALT+V+S) doesn't work on Win Vista, while it does work on Win XP. To get around this problem, and to make menu item selection more "tester friendly" we provide this keyword. It takes the name of a menu item as defined in the MENUMAP dictionary in the CalculatorGUIMap.py file. The MENUMAP dictionary items translate the application oriented menu name into the sequence of ALT keys to access that menu item. To make this work on Win XP and Win Vista, this keyword sends the ALT key first, waits a bit, then sends the sequence of keys from the MENUMAP. Complicated, but welcome to the wierd world of Windows GUI testing!</doc>
+<arguments>
+<arg>Edit Copy</arg>
+</arguments>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${MENUMAP}</arg>
+<arg>${MenuItem}</arg>
+</arguments>
+<assign>
+<var>${AltKeys}</var>
+</assign>
+<msg timestamp="20180812 13:43:17.316" level="INFO">${AltKeys} = EC</msg>
+<status status="PASS" endtime="20180812 13:43:17.316" starttime="20180812 13:43:17.315"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${AltKeys} =</arg>
+<arg>Set Variable</arg>
+<arg>VS</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:17.317" starttime="20180812 13:43:17.316"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTDOWN}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:17.343" starttime="20180812 13:43:17.317"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180812 13:43:18.343" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180812 13:43:18.343" starttime="20180812 13:43:17.343"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>${AltKeys}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:18.405" starttime="20180812 13:43:18.343"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTUP}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:18.432" starttime="20180812 13:43:18.406"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:18.432" starttime="20180812 13:43:17.315"></status>
+</kw>
+<kw name="Clip Get" library="AutoItLibrary">
+<doc>method ClipGet</doc>
+<assign>
+<var>${Answer}</var>
+</assign>
+<msg timestamp="20180812 13:43:18.433" level="INFO">${Answer} = DEADBEEF</msg>
+<status status="PASS" endtime="20180812 13:43:18.433" starttime="20180812 13:43:18.432"></status>
+</kw>
+<msg timestamp="20180812 13:43:18.433" level="INFO">${Ans} = DEADBEEF</msg>
+<status status="PASS" endtime="20180812 13:43:18.433" starttime="20180812 13:43:17.314"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${Ans}</arg>
+<arg>DEADBEEF</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:18.434" starttime="20180812 13:43:18.434"></status>
+</kw>
+<doc>Test Hex subtraction.</doc>
+<status status="PASS" endtime="20180812 13:43:18.434" critical="yes" starttime="20180812 13:43:12.071"></status>
+</test>
+<test id="s1-t7" name="Test Screen Capture On FAIL">
+<kw type="setup" name="Set Hex Mode">
+<doc>Put the calculator in Hex arithmetic Dword mode.</doc>
+<kw name="Select Calculator Menu Item">
+<doc>The Windows Calculator application doesn't really use a Windows GUI Menu to implement its menus. Therefore AutoIt can't see the menus as menu GUI objects. The only way to access the Calculator menus is via the ALT key sequences. In Win XP the Calculator menu ALT key letters are underlined, and thus available, all the time. Microsoft, in their wisdom, changed this in Win Vista so that you have to press the ALT key and "wait a bit" before the ALT key letters are underlined on the GUI. When they're not underlined, they don't work. Since AutoIt can send ALT key sequences VERY FAST, a sequence such as !VS (ALT+V+S) doesn't work on Win Vista, while it does work on Win XP. To get around this problem, and to make menu item selection more "tester friendly" we provide this keyword. It takes the name of a menu item as defined in the MENUMAP dictionary in the CalculatorGUIMap.py file. The MENUMAP dictionary items translate the application oriented menu name into the sequence of ALT keys to access that menu item. To make this work on Win XP and Win Vista, this keyword sends the ALT key first, waits a bit, then sends the sequence of keys from the MENUMAP. Complicated, but welcome to the wierd world of Windows GUI testing!</doc>
+<arguments>
+<arg>View Hex</arg>
+</arguments>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${MENUMAP}</arg>
+<arg>${MenuItem}</arg>
+</arguments>
+<assign>
+<var>${AltKeys}</var>
+</assign>
+<msg timestamp="20180812 13:43:18.439" level="INFO">${AltKeys} = VP</msg>
+<status status="PASS" endtime="20180812 13:43:18.439" starttime="20180812 13:43:18.438"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${AltKeys} =</arg>
+<arg>Set Variable</arg>
+<arg>VS</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:18.439" starttime="20180812 13:43:18.439"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTDOWN}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:18.465" starttime="20180812 13:43:18.439"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180812 13:43:19.466" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180812 13:43:19.466" starttime="20180812 13:43:18.466"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>${AltKeys}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:19.528" starttime="20180812 13:43:19.466"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTUP}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:19.554" starttime="20180812 13:43:19.528"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:19.554" starttime="20180812 13:43:18.438"></status>
+</kw>
+<kw name="Click Buttons">
+<doc>Click a sequence of buttons by their text names, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>Hex Dword</arg>
+</arguments>
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${ButtonNames}</arg>
+</arguments>
+<assign>
+<var>@{Buttons}</var>
+</assign>
+<msg timestamp="20180812 13:43:19.556" level="INFO">@{Buttons} = [ Hex | Dword ]</msg>
+<status status="PASS" endtime="20180812 13:43:19.556" starttime="20180812 13:43:19.555"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>@{Buttons}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:19.557" level="INFO">Hex</msg>
+<msg timestamp="20180812 13:43:19.557" level="INFO">Dword</msg>
+<status status="PASS" endtime="20180812 13:43:19.557" starttime="20180812 13:43:19.556"></status>
+</kw>
+<kw type="for" name="${ButtonName} IN [ @{Buttons} ]">
+<kw type="foritem" name="${ButtonName} = Hex">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:19.559" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:19.559" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:19.559" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:19.559" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:19.559" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:19.559" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:19.559" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:19.559" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:19.559" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:19.559" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:19.559" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:19.560" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:19.560" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:19.560" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:19.560" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:19.560" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:19.560" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:19.560" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:19.560" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:19.560" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:19.560" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:19.560" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:19.560" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:19.560" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:19.561" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:19.561" starttime="20180812 13:43:19.558"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:19.561" level="INFO">Hex"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:19.561" starttime="20180812 13:43:19.561"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:19.562" level="INFO">${ButtonName} = Button1</msg>
+<status status="PASS" endtime="20180812 13:43:19.562" starttime="20180812 13:43:19.562"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:19.573" starttime="20180812 13:43:19.563"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:19.574" starttime="20180812 13:43:19.557"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:19.574" starttime="20180812 13:43:19.557"></status>
+</kw>
+<kw type="foritem" name="${ButtonName} = Dword">
+<kw name="Click Button">
+<doc>Click a button by its text name, using the Calculator GUI Map.</doc>
+<arguments>
+<arg>${ButtonName}</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>&amp;{GUIMAP_61}</arg>
+</arguments>
+<msg timestamp="20180812 13:43:19.575" level="INFO">Hex=Button1</msg>
+<msg timestamp="20180812 13:43:19.576" level="INFO">Dword=Button6</msg>
+<msg timestamp="20180812 13:43:19.576" level="INFO">Oct=Button3</msg>
+<msg timestamp="20180812 13:43:19.576" level="INFO">Bin=Button4</msg>
+<msg timestamp="20180812 13:43:19.576" level="INFO">1=Button5</msg>
+<msg timestamp="20180812 13:43:19.576" level="INFO">+=Button23</msg>
+<msg timestamp="20180812 13:43:19.576" level="INFO">*=Button21</msg>
+<msg timestamp="20180812 13:43:19.576" level="INFO">-=Button22</msg>
+<msg timestamp="20180812 13:43:19.576" level="INFO">/=Button20</msg>
+<msg timestamp="20180812 13:43:19.576" level="INFO">Qword=Button5</msg>
+<msg timestamp="20180812 13:43:19.576" level="INFO">0=Button6</msg>
+<msg timestamp="20180812 13:43:19.576" level="INFO">3=Button16</msg>
+<msg timestamp="20180812 13:43:19.576" level="INFO">2=Button11</msg>
+<msg timestamp="20180812 13:43:19.577" level="INFO">5=Button10</msg>
+<msg timestamp="20180812 13:43:19.577" level="INFO">4=Button4</msg>
+<msg timestamp="20180812 13:43:19.577" level="INFO">7=Button3</msg>
+<msg timestamp="20180812 13:43:19.577" level="INFO">6=Button15</msg>
+<msg timestamp="20180812 13:43:19.577" level="INFO">9=Button14</msg>
+<msg timestamp="20180812 13:43:19.577" level="INFO">8=Button9</msg>
+<msg timestamp="20180812 13:43:19.577" level="INFO">Byte=Button8</msg>
+<msg timestamp="20180812 13:43:19.577" level="INFO">==Button28</msg>
+<msg timestamp="20180812 13:43:19.577" level="INFO">C=Button13</msg>
+<msg timestamp="20180812 13:43:19.577" level="INFO">Word=Button7</msg>
+<msg timestamp="20180812 13:43:19.577" level="INFO">Clear=Button13</msg>
+<msg timestamp="20180812 13:43:19.577" level="INFO">Dec=Button2</msg>
+<status status="PASS" endtime="20180812 13:43:19.577" starttime="20180812 13:43:19.575"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${ButtonText}"text***"</arg>
+</arguments>
+<msg timestamp="20180812 13:43:19.578" level="INFO">Dword"text***"</msg>
+<status status="PASS" endtime="20180812 13:43:19.578" starttime="20180812 13:43:19.578"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${GUIMAP}</arg>
+<arg>${ButtonText}</arg>
+</arguments>
+<assign>
+<var>${ButtonName}</var>
+</assign>
+<msg timestamp="20180812 13:43:19.579" level="INFO">${ButtonName} = Button6</msg>
+<status status="PASS" endtime="20180812 13:43:19.579" starttime="20180812 13:43:19.578"></status>
+</kw>
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>${EMPTY}</arg>
+<arg>${ButtonName}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:19.590" starttime="20180812 13:43:19.579"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:19.591" starttime="20180812 13:43:19.574"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:19.591" starttime="20180812 13:43:19.574"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:19.591" starttime="20180812 13:43:19.557"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:19.591" starttime="20180812 13:43:19.555"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1 sec</arg>
+</arguments>
+<msg timestamp="20180812 13:43:20.592" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180812 13:43:20.592" starttime="20180812 13:43:19.591"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:20.592" starttime="20180812 13:43:18.437"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>DE01F100</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:20.727" starttime="20180812 13:43:20.593"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{+}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:20.768" starttime="20180812 13:43:20.727"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>ABCDEF</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:20.911" starttime="20180812 13:43:20.769"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>=</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:20.943" starttime="20180812 13:43:20.912"></status>
+</kw>
+<kw name="Win Wait" library="AutoItLibrary">
+<doc>Direct wrapper for AutoIt's WinWait method.</doc>
+<arguments>
+<arg>计算器</arg>
+<arg>DEADBEAT</arg>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20180812 13:43:24.259" level="INFO">AutoItLibrary.WinWait(WindowTitle='\u8ba1\u7b97\u5668', WindowText='DEADBEAT', TimeOut='3')</msg>
+<msg timestamp="20180812 13:43:24.259" level="INFO">GetScreenImage(FilePath=E:\rf_project\AutoItLibrary\tests\FAIL_WinWait_1.png)</msg>
+<msg timestamp="20180812 13:43:24.259" html="yes" level="INFO">&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="FAIL_WinWait_1.png"&gt;&lt;img src="FAIL_WinWait_1.png" width="700px"&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;</msg>
+<msg timestamp="20180812 13:43:24.276" level="FAIL">Window '计算器' (DEADBEAT) failed to appear in 3 seconds</msg>
+<status status="FAIL" endtime="20180812 13:43:24.276" starttime="20180812 13:43:20.943"></status>
+</kw>
+<doc>Test that a screenshot is taken and included in the report file when an AutoItLibrary keyword fails.
+This test will always fail.</doc>
+<tags>
+<tag>ExpectedFAIL</tag>
+</tags>
+<status status="FAIL" endtime="20180812 13:43:24.277" critical="yes" starttime="20180812 13:43:18.436">Window '计算器' (DEADBEAT) failed to appear in 3 seconds</status>
+</test>
+<kw type="teardown" name="Stop Calculator">
+<doc>Shut down the Windows Calculator application.</doc>
+<kw name="Win Activate" library="AutoItLibrary">
+<doc>method WinActivate</doc>
+<arguments>
+<arg>计算器</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:24.781" starttime="20180812 13:43:24.281"></status>
+</kw>
+<kw name="Select Calculator Menu Item">
+<doc>The Windows Calculator application doesn't really use a Windows GUI Menu to implement its menus. Therefore AutoIt can't see the menus as menu GUI objects. The only way to access the Calculator menus is via the ALT key sequences. In Win XP the Calculator menu ALT key letters are underlined, and thus available, all the time. Microsoft, in their wisdom, changed this in Win Vista so that you have to press the ALT key and "wait a bit" before the ALT key letters are underlined on the GUI. When they're not underlined, they don't work. Since AutoIt can send ALT key sequences VERY FAST, a sequence such as !VS (ALT+V+S) doesn't work on Win Vista, while it does work on Win XP. To get around this problem, and to make menu item selection more "tester friendly" we provide this keyword. It takes the name of a menu item as defined in the MENUMAP dictionary in the CalculatorGUIMap.py file. The MENUMAP dictionary items translate the application oriented menu name into the sequence of ALT keys to access that menu item. To make this work on Win XP and Win Vista, this keyword sends the ALT key first, waits a bit, then sends the sequence of keys from the MENUMAP. Complicated, but welcome to the wierd world of Windows GUI testing!</doc>
+<arguments>
+<arg>Exit</arg>
+</arguments>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${MENUMAP}</arg>
+<arg>${MenuItem}</arg>
+</arguments>
+<assign>
+<var>${AltKeys}</var>
+</assign>
+<msg timestamp="20180812 13:43:24.782" level="INFO">${AltKeys} = {F4}</msg>
+<status status="PASS" endtime="20180812 13:43:24.782" starttime="20180812 13:43:24.782"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${AltKeys} =</arg>
+<arg>Set Variable</arg>
+<arg>VS</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:24.783" starttime="20180812 13:43:24.783"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTDOWN}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:24.809" starttime="20180812 13:43:24.783"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180812 13:43:25.810" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180812 13:43:25.810" starttime="20180812 13:43:24.810"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>${AltKeys}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:25.842" starttime="20180812 13:43:25.810"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ALTUP}</arg>
+</arguments>
+<status status="PASS" endtime="20180812 13:43:25.906" starttime="20180812 13:43:25.843"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:25.906" starttime="20180812 13:43:24.781"></status>
+</kw>
+<status status="PASS" endtime="20180812 13:43:25.906" starttime="20180812 13:43:24.280"></status>
+</kw>
+<doc>Tests the AutoItLibrary by using various AutoIt keywords on the GUI of the Windows Calculator application.
+
+
+1.变量的设定在该关键字，通过版本的不同获取到不同的buttonname
+Get Calculator Version
+
+2.suit set up.teart dow等的作用
+
+3.导入库的参数的解释
+
+刘伟
+
+20180811</doc>
+<status status="FAIL" endtime="20180812 13:43:25.906" starttime="20180812 13:42:56.019"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="6">Critical Tests</stat>
+<stat fail="1" pass="6">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">ExpectedFAIL</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Calculator Test Cases" pass="6">Calculator Test Cases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
