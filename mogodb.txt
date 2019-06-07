@@ -1,0 +1,11 @@
+mogodb
+nosql概念
+1.mogod.exe.启动mongo.exe,连接本地数据库   
+2.show dbs   
+3.use local 没有则创建
+4.db.runoob.insert({"name":"菜鸟教程"})
+5.show collections
+6.db.createcollection()'col1'
+7.doc=;db.cols.insert()doc
+8.查询db.col.find().preety()
+	db.col.find({"by":"菜鸟教程"}).pretty()
